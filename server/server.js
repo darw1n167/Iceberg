@@ -9,11 +9,12 @@ const app = express()
 dotenv.config()
 
 app.use(cors('*'))
+app.use(express.static('../iceberg/dist'))
+app.use(morgan('tiny'))
 
 const PORT = process.env.PORT
 const sql = postgres(process.env.DATABASE_URL)
 
-app.use(morgan('tiny'))
 
 app.get('/all', async (req, res) => {
    try {

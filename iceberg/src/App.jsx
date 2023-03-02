@@ -1,12 +1,11 @@
 import './App.css'
-import {} from './context/context'
 
 
 function App() {
 
   return (
     <>
-
+      <div>hi</div>
     </>
   )
 }
