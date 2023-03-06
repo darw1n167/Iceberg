@@ -30,6 +30,7 @@ function App() {
         <ActivityFeed />
         <Education />
         <About />
+        <Skills />
       </ExperienceContext.Provider>
     </>
   );

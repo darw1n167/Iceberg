@@ -10,11 +10,11 @@
   --line-height-default: 1.25;
   --color-action: #0a66c2;
 }
-
+/* 
 body {
   background-color: rgba(0, 0, 0, 0.08);
   font-family: var(----artdeco-reset-typography-font-family-sans);
-}
+} */
 .display-flex {
   display: flex !important;
 }
