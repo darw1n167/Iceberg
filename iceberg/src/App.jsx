@@ -1,13 +1,12 @@
-import './App.css'
-
+import './App.css';
+import ActivityFeed from './Components/Acitivity';
 
 function App() {
-
-  return (
-    <>
-      <div>hi</div>
-    </>
-  )
+	return (
+		<>
+			<ActivityFeed />
+		</>
+	);
 }
 
-export default App
+export default App;
