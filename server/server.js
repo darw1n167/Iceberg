@@ -15,7 +15,16 @@ app.use(morgan("tiny"));
 const PORT = process.env.PORT;
 const sql = postgres(process.env.DATABASE_URL);
 
-app.get("/all", async (req, res) => {
+app.get("/company", async (req, res) => {
+  try {
+    const data = await sql`SELECT * FROM company;`;
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json({ error: "server error" });
+  }
+});
+
+app.get("/skills", async (req, res) => {
   try {
     const data = await sql`SELECT * FROM skill`;
     res.json(data);

@@ -3,14 +3,34 @@ import "./Skills.css";
 
 function Skills() {
   const [skills, setSkills] = useState([]);
+  const [companies, setCompanies] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  const getCompany = async () => {
+    const response = await fetch("http://localhost:8000/company");
+    const data = await response.json();
+    const companyObj = {};
+    for (const company of data) {
+      companyObj[company.id] = {
+        name: company.name,
+        logo_img: company.logo_img,
+      };
+    }
+    setCompanies(companyObj);
+    setIsLoading(false);
+  };
+
   const getSkills = async () => {
-    const response = await fetch("http://localhost:8000/all");
+    const response = await fetch("http://localhost:8000/skills");
     const data = await response.json();
     setSkills(data);
   };
+
   useEffect(() => {
     getSkills();
+    getCompany();
   }, []);
+
   // return (
   //   <section
   //     id="ember3235"
@@ -599,112 +619,13 @@ function Skills() {
           {skills.map((skill) => {
             return (
               //Start of each skill list
-              <li className="skill-item-container">
-                <div className="padding-top-bottom-12-left-right-24">
-                  {/*  skill title */}
-                  <div>
-                    <a>
-                      <span className="skill-title">{skill.name}</span>
-                    </a>
-                  </div>
-                  {/* Each skills company and endorsements */}
-                  <ul>
-                    <li>
-                      <div className="display-flex margin-top-bottom-4">
-                        <div className="right-margin-8">
-                          <img width="24" height="24" loading="lazy" src="" />
-                        </div>
-                        <div className="display-flex align-items-center">
-                          <div className="inline-show-more-text">
-                            <span>fetch company</span>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <a target="_self" href="">
-                        <div className="display-flex">
-                          <div className="right-margin-8">
-                            <img width="24" height="24" loading="lazy" src="" />
-                          </div>
-                          <div className="display-flex align-items-center">
-                            <span>endorsed by</span>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <a target="_self" href="">
-                        {/* <div class="mr2 mv1">
-                        <ul class="ivm-entity-pile display-flex align-items-center t-black">
-                          <li class="ivm-entity-pile__img-item--stacked">
-                            <div class="ivm-view-attr__img-wrapper ivm-view-attr__img-wrapper--use-img-tag display-flex"> */}
-                        <div className="display-flex">
-                          <div className="right-margin-8">
-                            <li-icon
-                            // aria-hidden="true"
-                            // type="people"
-                            // class="ivm-view-attr__icon--icon "
-                            // size="medium"
-                            >
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                data-supported-dps="24x24"
-                                fill="currentColor"
-                                class="mercado-match"
-                                width="24"
-                                height="24"
-                                focusable="false"
-                              >
-                                <path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z"></path>
-                              </svg>
-                            </li-icon>
-                          </div>
-                          <div className="display-flex align-items-center">
-                            <span>3 endorsements</span>
-                          </div>
-                          {/* </div>
-                          </li>
-                          </ul>
-                        </div> */}
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <div className="padding-top-bottom-8">
-                        <button
-                          id="ember3240"
-                          // className="artdeco-button artdeco-button--muted artdeco-button--2 artdeco-button--secondary ember-view"
-                          type="button"
-                        >
-                          {" "}
-                          <li-icon
-                            aria-hidden="true"
-                            type="check"
-                            className="artdeco-button__icon"
-                            size="small"
-                          >
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 16 16"
-                              data-supported-dps="16x16"
-                              fill="currentColor"
-                              className="mercado-match"
-                              width="16"
-                              height="16"
-                              focusable="false"
-                            >
-                              <path d="M12.57 2H15L6 15l-5-5 1.41-1.41 3.31 3.3z"></path>
-                            </svg>
-                          </li-icon>
-                          <span className="artdeco-button__text">Endorsed</span>
-                        </button>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+              <SkillItem
+                key={skill.id}
+                id={skill.id}
+                skill={skill}
+                companies={companies}
+                isLoading={isLoading}
+              />
             );
           })}
         </ul>
@@ -713,12 +634,12 @@ function Skills() {
             <div>
               <span>Show all 23 skills</span>
             </div>
-            <div class="pvs-navigation__icon">
+            <div className="pvs-navigation__icon">
               <li-icon aria-hidden="true" type="arrow-right" size="small">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
-                  class="mercado-match"
+                  className="mercado-match"
                   data-supported-dps="16x16"
                   fill="currentColor"
                   width="16"
@@ -736,4 +657,125 @@ function Skills() {
   );
 }
 
+function SkillItem({ id, skill, companies, isLoading }) {
+  // console.log(isLoading ? "loading..." : companies);
+  // console.log(company[skill.company_id].name);
+  // console.log(companies);
+  return (
+    <li key={id} className="skill-item-container">
+      <div className="padding-top-bottom-12-left-right-24">
+        {/*  skill title */}
+        <div>
+          <a>
+            <span className="skill-title">{skill.name}</span>
+          </a>
+        </div>
+        {/* Each skills company and endorsements */}
+        <ul>
+          <li>
+            <div className="display-flex margin-top-bottom-4">
+              <div className="right-margin-8">
+                <img width="24" height="24" loading="lazy" src="" />
+              </div>
+              <div className="display-flex align-items-center">
+                <div className="inline-show-more-text">
+                  {/* <span>{company}</span> */}
+                  {/* <span>fetch company</span> */}
+                  {isLoading ? (
+                    <span>loading...</span>
+                  ) : (
+                    <span>{companies[skill.company_id].name}</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a target="_self" href="">
+              <div className="display-flex">
+                <div className="right-margin-8">
+                  <img width="24" height="24" loading="lazy" src="" />
+                </div>
+                <div className="display-flex align-items-center">
+                  <span>
+                    Endorsed by Dany Briceno and 1 other mutual connection
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a target="_self" href="">
+              {/* <div class="mr2 mv1">
+                        <ul class="ivm-entity-pile display-flex align-items-center t-black">
+                          <li class="ivm-entity-pile__img-item--stacked">
+                            <div class="ivm-view-attr__img-wrapper ivm-view-attr__img-wrapper--use-img-tag display-flex"> */}
+              <div className="display-flex">
+                <div className="right-margin-8">
+                  <li-icon
+                  // aria-hidden="true"
+                  // type="people"
+                  // class="ivm-view-attr__icon--icon "
+                  // size="medium"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      data-supported-dps="24x24"
+                      fill="currentColor"
+                      className="mercado-match"
+                      width="24"
+                      height="24"
+                      focusable="false"
+                    >
+                      <path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z"></path>
+                    </svg>
+                  </li-icon>
+                </div>
+                <div className="display-flex align-items-center">
+                  <span>3 endorsements</span>
+                </div>
+                {/* </div>
+                          </li>
+                          </ul>
+                        </div> */}
+              </div>
+            </a>
+          </li>
+          <li>
+            <div className="padding-top-bottom-8">
+              <button
+                id="ember3240"
+                // className="artdeco-button artdeco-button--muted artdeco-button--2 artdeco-button--secondary ember-view"
+                type="button"
+              >
+                {" "}
+                <li-icon
+                  aria-hidden="true"
+                  type="check"
+                  className="artdeco-button__icon"
+                  size="small"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    data-supported-dps="16x16"
+                    fill="currentColor"
+                    className="mercado-match"
+                    width="16"
+                    height="16"
+                    focusable="false"
+                  >
+                    <path d="M12.57 2H15L6 15l-5-5 1.41-1.41 3.31 3.3z"></path>
+                  </svg>
+                </li-icon>
+                <span className="artdeco-button__text">Endorsed</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+  );
+}
 export default Skills;
