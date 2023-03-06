@@ -602,10 +602,7 @@ function Skills() {
   // );
   return (
     <section className="entire-component margin-top-8">
-      <div
-        id="skills"
-        className="pv-profile-card-anchor padding-top-right-left-12"
-      >
+      <div id="skills" className=" padding-top-right-left-12">
         <div className="padding-top-right-left-12">
           <h2 className="component-h2-header">
             <span>Skills</span>
@@ -663,9 +660,6 @@ function SkillItem({ id, skill, companies, isLoading }) {
     setIsEndorsed(!isEndorsed);
   };
 
-  // console.log(isLoading ? "loading..." : companies);
-  // console.log(company[skill.company_id].name);
-  // console.log(companies);
   return (
     <li key={id} className="skill-item-container">
       <div className="padding-top-bottom-12-left-right-24">
@@ -686,8 +680,6 @@ function SkillItem({ id, skill, companies, isLoading }) {
               </div>
               <div className="display-flex align-items-center">
                 <div className="inline-show-more-text">
-                  {/* <span>{company}</span> */}
-                  {/* <span>fetch company</span> */}
                   {isLoading ? (
                     <span>loading...</span>
                   ) : (
@@ -713,18 +705,9 @@ function SkillItem({ id, skill, companies, isLoading }) {
           </li>
           <li>
             <a target="_self" href="">
-              {/* <div class="mr2 mv1">
-                        <ul class="ivm-entity-pile display-flex align-items-center t-black">
-                          <li class="ivm-entity-pile__img-item--stacked">
-                            <div class="ivm-view-attr__img-wrapper ivm-view-attr__img-wrapper--use-img-tag display-flex"> */}
               <div className="display-flex">
                 <div className="right-margin-8">
-                  <li-icon
-                  // aria-hidden="true"
-                  // type="people"
-                  // class="ivm-view-attr__icon--icon "
-                  // size="medium"
-                  >
+                  <li-icon>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -746,10 +729,6 @@ function SkillItem({ id, skill, companies, isLoading }) {
                     <span>2 endorsements</span>
                   )}
                 </div>
-                {/* </div>
-                          </li>
-                          </ul>
-                        </div> */}
               </div>
             </a>
           </li>
@@ -768,20 +747,10 @@ function SkillItem({ id, skill, companies, isLoading }) {
 
 function EndorseButton({ isEndorsed, toggleEndorsement }) {
   return (
-    <button
-      id="ember3240"
-      // className="artdeco-button artdeco-button--muted artdeco-button--2 artdeco-button--secondary ember-view"
-      type="button"
-      onClick={toggleEndorsement}
-    >
+    <button type="button" onClick={toggleEndorsement}>
       {isEndorsed ? (
         <div>
-          <li-icon
-            aria-hidden="true"
-            type="check"
-            className="artdeco-button__icon"
-            size="small"
-          >
+          <li-icon>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -795,7 +764,7 @@ function EndorseButton({ isEndorsed, toggleEndorsement }) {
               <path d="M12.57 2H15L6 15l-5-5 1.41-1.41 3.31 3.3z"></path>
             </svg>
           </li-icon>{" "}
-          <span className="artdeco-button__text">Endorsed</span>
+          <span>Endorsed</span>
         </div>
       ) : (
         <span>Endorse</span>

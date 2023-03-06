@@ -5,17 +5,12 @@
     Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica,
     Arial, sans-serif;
 
-  /* --font-size-large: 2rem; */
   --font-size-large: 20px;
   --font-weight-bold: 600;
   --line-height-default: 1.25;
   --color-action: #0a66c2;
 }
-/* *,
-  :after,
-  :before {
-    box-sizing: inherit;
-  } */
+
 body {
   background-color: rgba(0, 0, 0, 0.08);
   font-family: var(----artdeco-reset-typography-font-family-sans);
@@ -63,7 +58,6 @@ a:hover {
   cursor: pointer;
 }
 button {
-  /* border-width: 0px; */
   box-sizing: border-box;
   border-style: none;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
@@ -84,10 +78,8 @@ button:hover {
 }
 .entire-component {
   display: block;
-  /* border: black solid 1px; */
   background-color: white;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
-  /* color: rgba(0, 0, 0, 0.9); */
   border-style: none;
   border-radius: 8px;
   width: 600px;
@@ -97,14 +89,11 @@ button:hover {
   position: relative;
 }
 .skill-item-container::after {
-  /* box-sizing: border-box; */
-  /* display: block; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   /* bottom: 0; */
   content: "";
   height: 0;
   position: absolute;
-  /* box-sizing: inherit; */
   right: 2rem;
   width: 100%;
   width: calc(100% - 4rem);
@@ -148,42 +137,4 @@ li {
   background-color: rgba(0, 0, 0, 0.08);
   color: rgba(0, 0, 0, 0.6);
   text-decoration: none;
-  /* background-color: revert; */
-  /* box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.6); */
-  /* background-color: rgba(255, 255, 255, 0); */
 }
-.footer-text {
-}
-/* .pv-profile-card-anchor {
-  position: absolute;
-  top: -108px;
-  visibility: hidden;
-} */
-/* 
-.pvs-header__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: var(--spacing-one-and-a-half-x);
-  padding-bottom: 0;
-}
-
-.pvs-list {
-  list-style-type: none;
-}
-
-.justify-space-between {
-  justify-content: space-between !important;
-}
-.flex-row {
-  flex-direction: row !important;
-}
-.full-width {
-  width: 100% !important;
-}
-.flex-column {
-  flex-direction: column !important;
-}
-.t-bold {
-  font-weight: 600;
-} */
