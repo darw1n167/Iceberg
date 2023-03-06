@@ -1,12 +1,12 @@
 import './App.css'
-import About from './components/About'
+import InLearning from './components/InLearning'
 
 
 function App() {
 
   return (
     <>
-      <About />
+      <InLearning />
     </>
   )
 }

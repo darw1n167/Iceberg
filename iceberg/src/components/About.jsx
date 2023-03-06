@@ -1,4 +1,3 @@
-import { HiOutlinePencil } from 'react-icons/hi'
 import { useState } from 'react'
 import '../About.css'
 
