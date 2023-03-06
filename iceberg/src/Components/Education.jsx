@@ -22,7 +22,6 @@ const Education = () => {
                <span className='font-light'>{duration}</span><br /><br />
                <span>{description}</span><br /><br />
                <span><span className='bold'>Skills: </span>{skills}</span>
-               <svg><path d="M14 2L0 6.67l5 2.64 5.67-3.98L6.7 11l2.63 5L14 2z"></path></svg>
             </div>
          </div>
       </div>
