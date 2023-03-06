@@ -42,3 +42,18 @@ Ensure clean working tree:
 ```
 $ git status
 ```
+
+
+# Running
+
+Upon cloning the repo, intall dependencies:
+
+From BOTH the iceberg and server folder, run the following command:
+```
+$ npm i
+```
+
+From the server folder, run the following command to start the server and client:
+```
+$ npm run dev
+```
