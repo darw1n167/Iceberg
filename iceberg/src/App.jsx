@@ -2,6 +2,7 @@
 import './App.css'
 import Education from './Components/Education'
 import ActivityFeed from './Components/Acitivity';
+import About from './components/About'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
       <ActivityFeed />
       <Education />
+      <About />
     </>
   )
 }
