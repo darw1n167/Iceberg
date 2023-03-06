@@ -1,0 +1,48 @@
+@import url(https://fonts.cdnfonts.com/s/16654/HelveticaNeue.ttf);
+
+* {
+   font-family: Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+   margin: 0px;
+}
+
+.section-container {
+   width: 758px;
+   padding: 12px 24px;
+   outline-width: 1px;
+   outline-color: rgb(216, 216, 216);
+   outline-style: solid;
+   border-radius: 0.8rem;
+}
+
+.entry-container {
+   display: flex;
+   padding-top: 12px;
+}
+
+.entry-img-sidebar {
+   width: 50px;
+}
+
+.entry-img {
+   height: 48px;
+   width: 48px;
+}
+
+.entry-main {
+   padding: 0px 12px;
+}
+
+.bold {
+   font-weight: bold;
+}
+
+.font-light {
+   color: rgb(82, 82, 82);
+}
+
+span {
+   line-height: 1.9rem;
+}
