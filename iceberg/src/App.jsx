@@ -1,13 +1,14 @@
-import './App.css'
-import Education from './Components/Education'
+import './App.css';
+import Education from './Components/Education';
+import PeopleAlsoViewed from './Components/PeopleAlsoViewed';
 
 function App() {
-
-  return (
-    <>
-      <Education />
-    </>
-  )
+	return (
+		<>
+			<Education />
+			<PeopleAlsoViewed />
+		</>
+	);
 }
 
-export default App
+export default App;
