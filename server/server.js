@@ -16,10 +16,20 @@ const PORT = process.env.PORT
 const sql = postgres(process.env.DATABASE_URL)
 
 
-app.get('/all', async (req, res) => {
-   try {
-      const data = await sql`SELECT * FROM skill`
-      res.json(data)
+// app.get('/all', async (req, res) => {
+//    try {
+//       const data = await sql`SELECT * FROM skill`
+//       res.json(data)
+//    } catch (error) {
+//       res.status(500).json({error})
+//    }
+// })
+
+app.get('/profile', async(req, res) => {
+   try{
+      const result = await sql `SELECT * FROM experience JOIN company ON experience.company_id = company.id;;`
+      res.json(result)
+      console.log(result)
    } catch (error) {
       res.status(500).json({error})
    }
