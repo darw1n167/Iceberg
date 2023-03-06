@@ -1,10 +1,10 @@
-import './Education.css'
+// import './Education.css'
 
-const Education = () => {
-   return (
-      <>
-      </>
-   )
-}
+// const Education = () => {
+//    return (
+//       <>
+//       </>
+//    )
+// }
 
-export default Education
+// export default Education

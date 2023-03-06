@@ -1,0 +1,20 @@
+.ExpAll{
+    border: solid lightgray 1px;
+    border-radius: 10px;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.job{
+    font-weight: bold;
+}
+
+.dates{
+    color: gray;
+}
+
+.location{
+    color: gray;
+}
