@@ -2,10 +2,14 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import './App.css'
 import Experience from './Components/Experience'
+import Education from './Components/Education'
+import ActivityFeed from './Components/Acitivity';
+import About from './components/About'
 
 export const ExperienceContext = React.createContext();
 
 const API_URL = 'http://localhost:8000';
+
 
 function App() {
 
@@ -24,9 +28,13 @@ function App() {
     <>
       <ExperienceContext.Provider value={{ experience,setExperience }}>
         <Experience />
+        <ActivityFeed />
+        <Education />
+        <About />
       </ExperienceContext.Provider>
+
     </>
   )
 }
 
-export default App
+export default App;

@@ -1,0 +1,78 @@
+.InLearning-div {
+    border: 1px solid rgb(226, 226, 226);
+    padding: 1rem;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    width: 340px;
+    height: 390px;
+}
+
+.InLearning-heading {
+    text-align: left;
+    font-size: 13px;
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.InLearning-recommendations {
+    text-align: left;
+}
+
+.InLearning-skills {
+    text-align: left;
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+.learning {
+    margin-left: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.list-img {
+    width: 126px;
+    height: 65px;
+    margin-top: 1rem;
+    /* background-color: silver; */
+    text-align: center;
+}
+
+.list-item {
+    display: flex;
+    margin-top: 1rem;
+    border-top: 1px solid rgb(226, 226, 226);
+    cursor: pointer;
+}
+
+.my-recommendations {
+    font-weight: 600;
+    color: rgb(100, 100, 100);
+    border-left: 1px solid rgb(226, 226, 226);
+    border-bottom: 1px solid rgb(226, 226, 226);
+    border-right: 1px solid rgb(226, 226, 226);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0.5rem;
+    transition: 0.3s;
+}
+
+.my-recommendations:hover {
+    background: rgb(226, 226, 226);
+}
+
+.play-btn {
+    margin-top: 0.8rem;
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.recommendation-list {
+    list-style-type: none;
+}
+
+.top-list-item {
+    display: flex;
+    cursor: pointer;
+}
