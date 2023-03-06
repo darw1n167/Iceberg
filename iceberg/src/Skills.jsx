@@ -630,9 +630,9 @@ function Skills() {
           })}
         </ul>
         <div>
-          <a className="display-flex align-items-center justify-center">
+          <a className="footer display-flex align-items-center justify-center">
             <div>
-              <span>Show all 23 skills</span>
+              <span className="footer-text">Show all 23 skills</span>
             </div>
             <div className="pvs-navigation__icon">
               <li-icon aria-hidden="true" type="arrow-right" size="small">
@@ -658,6 +658,11 @@ function Skills() {
 }
 
 function SkillItem({ id, skill, companies, isLoading }) {
+  const [isEndorsed, setIsEndorsed] = useState(true);
+  const toggleEndorsement = () => {
+    setIsEndorsed(!isEndorsed);
+  };
+
   // console.log(isLoading ? "loading..." : companies);
   // console.log(company[skill.company_id].name);
   // console.log(companies);
@@ -667,7 +672,9 @@ function SkillItem({ id, skill, companies, isLoading }) {
         {/*  skill title */}
         <div>
           <a>
-            <span className="skill-title">{skill.name}</span>
+            <span className="inline-show-more-text skill-title">
+              {skill.name}
+            </span>
           </a>
         </div>
         {/* Each skills company and endorsements */}
@@ -696,7 +703,7 @@ function SkillItem({ id, skill, companies, isLoading }) {
                 <div className="right-margin-8">
                   <img width="24" height="24" loading="lazy" src="" />
                 </div>
-                <div className="display-flex align-items-center">
+                <div className="inline-show-more-text display-flex align-items-center">
                   <span>
                     Endorsed by Dany Briceno and 1 other mutual connection
                   </span>
@@ -732,8 +739,12 @@ function SkillItem({ id, skill, companies, isLoading }) {
                     </svg>
                   </li-icon>
                 </div>
-                <div className="display-flex align-items-center">
-                  <span>3 endorsements</span>
+                <div className="inline-show-more-text display-flex align-items-center">
+                  {isEndorsed ? (
+                    <span>3 endorsements</span>
+                  ) : (
+                    <span>2 endorsements</span>
+                  )}
                 </div>
                 {/* </div>
                           </li>
@@ -743,39 +754,53 @@ function SkillItem({ id, skill, companies, isLoading }) {
             </a>
           </li>
           <li>
-            <div className="padding-top-bottom-8">
-              <button
-                id="ember3240"
-                // className="artdeco-button artdeco-button--muted artdeco-button--2 artdeco-button--secondary ember-view"
-                type="button"
-              >
-                {" "}
-                <li-icon
-                  aria-hidden="true"
-                  type="check"
-                  className="artdeco-button__icon"
-                  size="small"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 16 16"
-                    data-supported-dps="16x16"
-                    fill="currentColor"
-                    className="mercado-match"
-                    width="16"
-                    height="16"
-                    focusable="false"
-                  >
-                    <path d="M12.57 2H15L6 15l-5-5 1.41-1.41 3.31 3.3z"></path>
-                  </svg>
-                </li-icon>
-                <span className="artdeco-button__text">Endorsed</span>
-              </button>
-            </div>
+            <div className="padding-top-bottom-8"></div>
+            <EndorseButton
+              isEndorsed={isEndorsed}
+              toggleEndorsement={toggleEndorsement}
+            />
           </li>
         </ul>
       </div>
     </li>
+  );
+}
+
+function EndorseButton({ isEndorsed, toggleEndorsement }) {
+  return (
+    <button
+      id="ember3240"
+      // className="artdeco-button artdeco-button--muted artdeco-button--2 artdeco-button--secondary ember-view"
+      type="button"
+      onClick={toggleEndorsement}
+    >
+      {isEndorsed ? (
+        <div>
+          <li-icon
+            aria-hidden="true"
+            type="check"
+            className="artdeco-button__icon"
+            size="small"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              data-supported-dps="16x16"
+              fill="currentColor"
+              className="mercado-match"
+              width="16"
+              height="16"
+              focusable="false"
+            >
+              <path d="M12.57 2H15L6 15l-5-5 1.41-1.41 3.31 3.3z"></path>
+            </svg>
+          </li-icon>{" "}
+          <span className="artdeco-button__text">Endorsed</span>
+        </div>
+      ) : (
+        <span>Endorse</span>
+      )}
+    </button>
   );
 }
 export default Skills;
