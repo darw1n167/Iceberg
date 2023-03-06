@@ -1,4 +1,4 @@
-# Dev usage
+# Clone and Branch
 
 1. Create a new branch for the component you are creating
 1. Clone the repo to your local repo:
