@@ -1,4 +1,4 @@
-# Dev usage
+# Clone and Branch
 
 1. Create a new branch for the component you are creating
 1. Clone the repo to your local repo:
@@ -41,4 +41,19 @@ $ git merge origin/[your branch name]
 Ensure clean working tree:
 ```
 $ git status
+```
+
+
+# Running
+
+Upon cloning the repo, intall dependencies:
+
+From BOTH the iceberg and server folder, run the following command:
+```
+$ npm i
+```
+
+From the server folder, run the following command to start the server and client:
+```
+$ npm run dev
 ```
