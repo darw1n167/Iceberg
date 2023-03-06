@@ -23,7 +23,7 @@ function App() {
       console.log(data)
     }
     fetchExperience()
-  })
+  }, [])
   return (
     <>
       <ExperienceContext.Provider value={{ experience,setExperience }}>
