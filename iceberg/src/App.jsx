@@ -5,7 +5,8 @@ import Skills from "./Skills";
 import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import ActivityFeed from "./Components/Acitivity";
-import About from "./components/About";
+import About from "./Components/About";
+import MayKnow from './Components/MayKnow.jsx'
 
 export const ExperienceContext = React.createContext();
 
@@ -32,6 +33,7 @@ function App() {
         <About />
         <Skills />
       </ExperienceContext.Provider>
+        <MayKnow />
     </>
   );
 }
