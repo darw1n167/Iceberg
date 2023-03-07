@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./App.css";
-import Skills from "./Skills";
+import Profile from "./Components/Profile";
+import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import ActivityFeed from "./Components/Acitivity";
@@ -26,6 +27,7 @@ function App() {
   return (
     <>
       <ExperienceContext.Provider value={{ experience, setExperience }}>
+        <Profile />
         <Experience />
         <ActivityFeed />
         <Education />

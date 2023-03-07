@@ -1,0 +1,131 @@
+.display-flex {
+  display: flex;
+}
+.text-align-left {
+  text-align: left !important;
+}
+/* section tag that encompasses the whole component */
+.entire-profile-section {
+  margin-top: 100px;
+}
+/* =======================================
+BACKGROUND IMAGE    
+======================================= */
+/*div tag that contains background image behind the profile picture */
+.live-video-hero-image {
+  border: black 1px solid;
+  min-height: 159px;
+  max-height: 159px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  position: relative;
+  overflow-y: hidden;
+}
+.profile-background-image__image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: var(--corner-radius-medium);
+  border-top-right-radius: var(--corner-radius-medium);
+}
+/* img tag of the profile picture */
+.profile-background-image__image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* overflow: clip; */
+  /* overflow-clip-margin: content-box; */
+  cursor: pointer;
+  /* left: 0px; */
+  /* top: 0px; */
+  background-color: black;
+}
+/* ====================================
+  PROFILE PICTURE
+  ==================================== */
+.ph5 {
+  padding: 0 24px;
+}
+.profile-photo-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  /* border-radius: 50%; */
+  margin-top: -112px;
+  z-index: 4px;
+}
+
+/* button tag around .profile-image */
+.profile-photo-button {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+/* img tag for the profile */
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background-color: gray;
+  box-sizing: border-box;
+}
+.photo-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+}
+/* the green indicator in front of the profile picture saying if the user is online or not */
+.presence-indicator {
+  position: absolute;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  right: 24px;
+  background: #057642;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+  bottom: 0px;
+}
+/* "Status is online" behind the presence-indicator" */
+.visually-hidden {
+  display: block !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+.message-buttons {
+  display: inline-flex;
+}
+.artdeco-button {
+  /* line-height: 20px; */
+  border-radius: 16px;
+  padding: 6px 16px;
+  /* text-align: center; */
+  font-size: 16px;
+  min-height: 32px;
+  max-width: 480px;
+  background-color: #0a66c2;
+  color: #fff;
+}
