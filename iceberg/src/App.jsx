@@ -6,6 +6,8 @@ import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import ActivityFeed from "./Components/Acitivity";
 import About from "./components/About";
+import TopAd from "./Components/TopAd";
+import BottomAd from "./Components/BottomAd"
 
 export const ExperienceContext = React.createContext();
 
@@ -29,6 +31,8 @@ function App() {
         <Experience />
         <ActivityFeed />
         <Education />
+        <TopAd/>
+        <BottomAd />
         <About />
         <Skills />
       </ExperienceContext.Provider>
