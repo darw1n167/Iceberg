@@ -10,7 +10,7 @@ import MayKnow from './Components/MayKnow.jsx'
 
 export const ExperienceContext = React.createContext();
 
-const API_URL = "http://localhost:8000";
+export const API_URL = "http://localhost:8000";
 
 function App() {
   const [experience, setExperience] = useState([]);
@@ -24,6 +24,7 @@ function App() {
     }
     fetchExperience();
   }, []);
+
   return (
     <>
       <ExperienceContext.Provider value={{ experience, setExperience }}>
