@@ -138,15 +138,16 @@ function ProfileConnections() {
         <div>
           <ul>
             <li>
-              <img />
+              <img className="" />
             </li>
             <li>
               <img />
             </li>
           </ul>
         </div>
-        <span>
-          Moises Martinez, Chase Shertzer, and 20 other mutual connections
+        <span className="t-normal link-text">
+          <strong>Moises Martinez</strong>, <strong>Chase Shertzer</strong>, and
+          20 other mutual connections
         </span>
       </a>
     </>
@@ -157,21 +158,20 @@ function ProfileMessageButtons() {
     <div className="profile-buttons">
       <div className="message-button">
         <a className="anchor-button" role="button">
-          <li-icon>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              data-supported-dps="16x16"
-              fill="currentColor"
-              className="mercado-match"
-              width="16"
-              height="16"
-              focusable="false"
-            >
-              <path d="M14 2L0 6.67l5 2.64 5.67-3.98L6.7 11l2.63 5L14 2z"></path>
-            </svg>
-          </li-icon>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            data-supported-dps="16x16"
+            fill="currentColor"
+            className="mercado-match paper-airplane"
+            width="16"
+            height="16"
+            focusable="false"
+          >
+            <path d="M14 2L0 6.67l5 2.64 5.67-3.98L6.7 11l2.63 5L14 2z"></path>
+          </svg>
           Message
+          {/* <span>Message</span> */}
         </a>
       </div>
       <div className="dropdown-button">

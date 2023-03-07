@@ -19,6 +19,12 @@
 .margins-24 {
   margin: 24px;
 }
+.t-normal {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  /* line-height: 14px; */
+}
 /* section tag that encompasses the whole component */
 .entire-profile-section {
   margin-top: 10px;
@@ -177,9 +183,11 @@ MESSAGE BUTTON
   /* padding-top: 12px; */
   box-sizing: border-box;
   padding-top: 12px;
+  align-items: center;
 }
-.message-buttons {
-  box-sizing: inherit;
+.message-button {
+  box-sizing: border-box;
+  display: block;
   /* margin: 0;
   padding: 0; */
   /* font-size: 100%; */
@@ -187,6 +195,10 @@ MESSAGE BUTTON
   /* vertical-align: baseline; */
 }
 .anchor-button {
+  display: inline-flex;
+  align-items: center;
+  /* text-align: center; */
+  box-sizing: border-box;
   font-family: inherit;
   font-weight: 600;
   border-radius: 16px;
@@ -203,7 +215,9 @@ MESSAGE BUTTON
   color: #fff;
   background-color: rgb(0, 65, 130);
 }
-
+.paper-airplane {
+  margin: 0 4px 0 -2px;
+}
 .button--circle {
   margin-top: 0;
   height: 32px;
@@ -231,11 +245,12 @@ FOOTER
   position: relative;
 }
 .footer-section {
-  max-width: 50%;
-  /* max-width: calc(100% - (2.4rem * 2)); */
+  display: inline-block;
+  min-width: 50%;
+  max-width: calc(100% - (2.4rem * 2));
   background-color: #dce6f1;
   border-radius: 8px;
-  /* position: relative; */
+  position: relative;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
@@ -270,5 +285,6 @@ FOOTER
   color: #0a66c2;
 }
 .link-text:hover {
+  cursor: pointer;
   text-decoration: underline;
 }
