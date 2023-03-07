@@ -58,7 +58,7 @@ function Skills() {
           })}
         </ul>
         <div>
-          <a className="footer display-flex align-items-center justify-center">
+          <a className="skill-anchor-tag footer display-flex align-items-center justify-center">
             <div>
               <span className="footer-text">Show all 23 skills</span>
             </div>
@@ -96,7 +96,7 @@ function SkillItem({ id, skill, companies, isLoading }) {
       <div className="padding-top-bottom-12-left-right-24">
         {/*  skill title */}
         <div>
-          <a>
+          <a className="skill-anchor-tag">
             <span className="inline-show-more-text skill-title">
               {skill.name}
             </span>
@@ -121,13 +121,13 @@ function SkillItem({ id, skill, companies, isLoading }) {
             </div>
           </li>
           <li>
-            <a target="_self" href="">
+            <a className="skill-anchor-tag" target="_self" href="">
               <div className="display-flex">
                 <div className="right-margin-8">
                   <img width="24" height="24" loading="lazy" src="" />
                 </div>
                 <div className="inline-show-more-text display-flex align-items-center">
-                  <span>
+                  <span className="color-action">
                     Endorsed by Dany Briceno and 1 other mutual connection
                   </span>
                 </div>
@@ -135,7 +135,7 @@ function SkillItem({ id, skill, companies, isLoading }) {
             </a>
           </li>
           <li>
-            <a target="_self" href="">
+            <a className="skill-anchor-tag" target="_self" href="">
               <div className="display-flex">
                 <div className="right-margin-8">
                   <li-icon>
@@ -155,9 +155,9 @@ function SkillItem({ id, skill, companies, isLoading }) {
                 </div>
                 <div className="inline-show-more-text display-flex align-items-center">
                   {isEndorsed ? (
-                    <span>3 endorsements</span>
+                    <span className="color-action"> 3 endorsements</span>
                   ) : (
-                    <span>2 endorsements</span>
+                    <span className="color-action">2 endorsements</span>
                   )}
                 </div>
               </div>
@@ -178,7 +178,11 @@ function SkillItem({ id, skill, companies, isLoading }) {
 
 function EndorseButton({ isEndorsed, toggleEndorsement }) {
   return (
-    <button type="button" onClick={toggleEndorsement}>
+    <button
+      className="endorse-button"
+      type="button"
+      onClick={toggleEndorsement}
+    >
       {isEndorsed ? (
         <div>
           <li-icon>
