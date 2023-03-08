@@ -1,20 +1,22 @@
-import React from "react";
-import { useEffect, useState } from "react";
-import "./App.css";
-import Skills from "./Skills";
-import Experience from "./Components/Experience";
-import Education from "./Components/Education";
-import ActivityFeed from "./Components/Acitivity";
-import About from "./components/About";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import './App.css';
+import Skills from './Skills';
+import Experience from './Components/Experience';
+import Education from './Components/Education';
+import ActivityFeed from './Components/Acitivity';
+import About from './Components/About';
+import MayKnow from './Components/MayKnow.jsx'
+import Footer from './Components/footer';
 import TopAd from "./Components/TopAd";
 import BottomAd from "./Components/BottomAd"
 
 export const ExperienceContext = React.createContext();
 
-const API_URL = "http://localhost:8000";
+export const API_URL = 'http://localhost:8000';
 
 function App() {
-  const [experience, setExperience] = useState([]);
+	const [experience, setExperience] = useState([]);
 
   useEffect(() => {
     async function fetchExperience() {
@@ -25,16 +27,19 @@ function App() {
     }
     fetchExperience();
   }, []);
+
   return (
     <>
       <ExperienceContext.Provider value={{ experience, setExperience }}>
-        <Experience />
-        <ActivityFeed />
-        <Education />
-        <TopAd/>
-        <BottomAd />
-        <About />
-        <Skills />
+			<Experience />
+			<ActivityFeed />
+			<Education />
+			<TopAd/>
+			<BottomAd />
+			<About />
+			<Skills />
+			<MayKnow />
+			<Footer />
       </ExperienceContext.Provider>
     </>
   );
