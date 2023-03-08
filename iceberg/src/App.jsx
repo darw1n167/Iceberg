@@ -7,6 +7,7 @@ import Education from './Components/Education';
 import ActivityFeed from './Components/Acitivity';
 import About from './Components/About';
 import MayKnow from './Components/MayKnow.jsx';
+import PeopleViewed from './Components/PeopleAlsoViewed';
 import Footer from './Components/footer';
 
 export const ExperienceContext = React.createContext();
@@ -35,6 +36,7 @@ function App() {
 				<About />
 				<Skills />
 				<MayKnow />
+				<PeopleViewed />
 				<Footer />
 			</ExperienceContext.Provider>
 		</>
