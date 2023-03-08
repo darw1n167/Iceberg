@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { useState } from 'react';
 import { ExperienceContext } from '../App.jsx';
 import './Experience.css';
-import armyImage from './linkedinarmy.jpeg';
+import armyImage from '../assets/linkedinarmy.jpeg';
 
 function Experience() {
   const { experience } = useContext(ExperienceContext);
