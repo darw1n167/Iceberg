@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Profile from "./Components/Profile";
 import Skills from "./Components/Skills";
-import Experience from "./Components/Experience";
+import Experience from "./Components/Experience";;
 import Education from "./Components/Education";
 import ActivityFeed from "./Components/Acitivity";
 import About from "./Components/About";
@@ -11,11 +11,12 @@ import MayKnow from "./Components/MayKnow.jsx";
 import Footer from "./Components/footer";
 import TopAd from "./Components/TopAd";
 import BottomAd from "./Components/BottomAd";
+import PeopleAlsoViewed from './Components/PeopleAlsoViewed';
 import { ProfileProvider } from "./context/ProfileContext";
 
 export const ExperienceContext = React.createContext();
 
-export const API_URL = "http://localhost:8000";
+export const API_URL = "http://localhost:8000";;
 
 function App() {
   const [experience, setExperience] = useState([]);
@@ -28,25 +29,25 @@ function App() {
     }
     fetchExperience();
   }, []);
-
-  return (
-    <>
+	return (
+		<>
       <ProfileProvider>
-        <ExperienceContext.Provider value={{ experience, setExperience }}>
-          <Profile />
-          <Experience />
-          <ActivityFeed />
-          <Education />
-          <About />
-          <Skills />
-			 <MayKnow />
-			 <Footer />
-			 <TopAd />
-			 <BottomAd />
-        </ExperienceContext.Provider>
+			<ExperienceContext.Provider value={{ experience, setExperience }}>
+				<Profile />
+				<Experience />
+				<ActivityFeed />
+				<Education />
+				<About />
+				<Skills />
+				<MayKnow />
+				<Footer />
+				<TopAd />
+				<BottomAd />
+				<PeopleAlsoViewed />
+			</ExperienceContext.Provider>
       </ProfileProvider>
-    </>
-  );
+		</>
+	);;
 }
 
-export default App;
+export default App
