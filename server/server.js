@@ -56,7 +56,6 @@ app.get('/profile', async (req, res) => {
 		const result =
 			await sql`SELECT * FROM experience JOIN company ON experience.company_id = company.id;;`;
 		res.json(result);
-		console.log(result);
 	} catch (error) {
 		res.status(500).json({ error });
 	}
