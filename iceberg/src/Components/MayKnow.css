@@ -5,6 +5,11 @@
 
 .container {
    width: 322px;
+   background-color: white;
+}
+
+.component-header {
+   font-size: 18px;
 }
 
 .cards {
@@ -44,6 +49,7 @@
 .show-more-text {
    margin-right: 5px;
    color: var(--color-subtext);
+   font-weight: 600;
 }
 
 .card {
@@ -59,6 +65,10 @@
 .card-content {
    max-width: 224px;
    padding-left: 12px;
+}
+
+.card-name {
+   font-size: 14px;
 }
 
 .card-image {

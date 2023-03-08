@@ -24,7 +24,7 @@ const MayKnow = () => {
       <People.Provider value={people}>
          <div className='container'>
             <div className='cards'>
-               <div><span className='bold component-h2-header'>People you may know</span></div>
+               <div><span className='bold component-header'>People you may know</span></div>
                {people.map(person => <MayKnowCard key={person.id} person={person} />).slice(0, showMore ? 10 : 5)}
             </div>
             <div className='show-more' onClick={() => setShowMore(!showMore)}>
@@ -55,7 +55,7 @@ const MayKnowCard = ({ person }) => {
       <div className='card'>
          <div className='card-image'><img className='thumbnail' src={person.pic_url} alt="" /></div>
          <div className='card-content'>
-            <div><span className='bold'>{person.name}</span></div>
+            <div><span className='card-name bold'>{person.name}</span></div>
             <div className='truncate'>{person.headline}</div>
             <button className='card-button' onClick={handleClick}>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false">
