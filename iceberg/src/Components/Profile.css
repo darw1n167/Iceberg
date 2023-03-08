@@ -1,5 +1,13 @@
 :root {
   --premium-color: rgb(195, 125, 22);
+  --artdeco-reset-typography-font-family-sans: -apple-system, system-ui,
+    BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Fira Sans, Ubuntu,
+    Oxygen, Oxygen Sans, Cantarell, Droid Sans, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Emoji, Segoe UI Symbol, Lucida Grande, Helvetica,
+    Arial, sans-serif;
+}
+* {
+  font-family: var(--artdeco-reset-typography-font-family-sans) !important;
 }
 .display-flex {
   display: flex;
@@ -200,6 +208,10 @@ BACKGROUND IMAGE
 /* ====================================
 PROFILE INFORMATION
 ==================================== */
+.user-name-title {
+  position: relative;
+  color: rgba(0, 0, 0, 0.8);
+}
 .profile-headline {
   max-width: calc(100% - 232px - 2.4rem);
   line-height: 1rem;
@@ -225,13 +237,12 @@ PROFILE INFORMATION
   align-self: center;
 }
 .distance-badge {
-  position: relative;
-  vertical-align: middle !important;
+  position: absolute;
   box-sizing: border-box;
+  padding-left: 5px;
 }
 .dist-value {
-  vertical-align: baseline;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 .company-button {
   display: flex;
@@ -250,6 +261,7 @@ PROFILE INFORMATION
 }
 .details-separator::before {
   content: "\00B7";
+  margin-right: 2px;
 }
 .anchor-jump-to-education {
   display: flex;
@@ -262,13 +274,20 @@ PROFILE INFORMATION
   font-weight: 600;
   color: rgba(0, 0, 0, 0.9);
 }
-/* .anchor-jump-to-education:active,
-.anchor-jump-to-education:focus {
-  outline: none;
-} */
+
+.location-details {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
 /* ===================================
 CONNECTIONS
 =================================== */
+.connections-text {
+  color: rgba(0, 0, 0, 0.6);
+}
+.connections-text:hover {
+  color: #0a66c2;
+}
 .connections-img-container {
   margin-right: 8px;
 }
@@ -444,6 +463,11 @@ FOOTER
   color: rgba(0, 0, 0, 0.9);
 }
 .link-text {
+  color: #0a66c2;
+  font-weight: 600;
+  font-size: 14px;
+}
+.link-text:visited {
   color: #0a66c2;
 }
 .link-text:hover {

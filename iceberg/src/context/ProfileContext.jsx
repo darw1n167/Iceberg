@@ -8,12 +8,9 @@ export const ProfileProvider = ({ children }) => {
 
   const getUsers = async () => {
     const response = await fetch("http://localhost:8000/users");
-    const data = response.json();
-
-    data.then((value) => {
-      setUsers(value);
-      setIsLoading(false);
-    });
+    const data = await response.json();
+    setUsers(data);
+    setIsLoading(false);
   };
   useEffect(() => {
     getUsers();

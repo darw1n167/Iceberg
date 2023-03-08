@@ -98,10 +98,13 @@ function ProfileInformation() {
           <h1 className="inline break-words v-align-middle text-heading-large">
             {isLoading
               ? "loading"
-              : users[0].first_name + " " + users[0].last_name}
+              : users[0].first_name + " mathafakin " + users[0].last_name}
           </h1>
-          <span className="distance-badge details-separator text-body-small">
-            <span className="dist-value"> 1st</span>
+          <span className="distance-badge  text-body-small">
+            <span className="dist-value details-separator">
+              {" "}
+              <span>1st</span>
+            </span>
           </span>
           <div className="user-headline break-words">
             {isLoading ? "loading" : users[0].headline}
@@ -165,7 +168,7 @@ function ProfileConnections() {
             </li>
           </ul>
         </div>
-        <span className="t-normal">
+        <span className="t-normal connections-text">
           <strong>Moises Martinez</strong>, <strong>Chase Shertzer</strong>, and
           20 other mutual connections
         </span>

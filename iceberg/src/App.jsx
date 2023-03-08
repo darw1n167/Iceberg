@@ -21,7 +21,6 @@ function App() {
       const response = await fetch(`${API_URL}/profile`);
       const data = await response.json();
       setExperience(data);
-      // console.log(data);
     }
     fetchExperience();
   }, []);
