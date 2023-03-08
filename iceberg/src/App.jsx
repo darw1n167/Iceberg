@@ -7,6 +7,7 @@ import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import ActivityFeed from "./Components/Acitivity";
 import About from "./components/About";
+import { ProfileProvider } from "./context/ProfileContext";
 
 export const ExperienceContext = React.createContext();
 
@@ -20,20 +21,22 @@ function App() {
       const response = await fetch(`${API_URL}/profile`);
       const data = await response.json();
       setExperience(data);
-      console.log(data);
+      // console.log(data);
     }
     fetchExperience();
   }, []);
   return (
     <>
-      <ExperienceContext.Provider value={{ experience, setExperience }}>
-        <Profile />
-        <Experience />
-        <ActivityFeed />
-        <Education />
-        <About />
-        <Skills />
-      </ExperienceContext.Provider>
+      <ProfileProvider>
+        <ExperienceContext.Provider value={{ experience, setExperience }}>
+          <Profile />
+          <Experience />
+          <ActivityFeed />
+          <Education />
+          <About />
+          <Skills />
+        </ExperienceContext.Provider>
+      </ProfileProvider>
     </>
   );
 }

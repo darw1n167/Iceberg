@@ -19,8 +19,30 @@
 .margins-24 {
   margin: 24px;
 }
+.relative {
+  position: relative;
+}
+.full-width {
+  width: 100%;
+}
+.break-words {
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.text-heading-large {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+.text-body-small {
+  font-size: 14px;
+  font-weight: 400;
+}
+.margin-right-12 {
+  margin-right: 12px;
+}
 .t-normal {
-  color: rgba(0, 0, 0, 0.6);
+  /* color: rgba(0, 0, 0, 0.6); */
   font-weight: 400;
   font-size: 14px;
   /* line-height: 14px; */
@@ -39,8 +61,8 @@ BACKGROUND IMAGE
 ======================================= */
 /*div tag that contains background image behind the profile picture */
 .live-video-hero-image {
-  min-height: 159px;
-  max-height: 159px;
+  min-height: 201px;
+  max-height: 201px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   position: relative;
@@ -144,7 +166,7 @@ BACKGROUND IMAGE
 }
 .badges {
   display: flex;
-  margin-right: -1.2rem;
+  margin-right: -12px;
   margin-top: 1.2rem;
   justify-content: flex-end;
   align-items: center;
@@ -175,10 +197,112 @@ BACKGROUND IMAGE
   min-width: auto;
 }
 
+/* ====================================
+PROFILE INFORMATION
+==================================== */
+.profile-headline {
+  max-width: calc(100% - 232px - 2.4rem);
+  line-height: 1rem;
+}
+.company-details {
+  margin-top: 8px;
+  width: 232px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  list-style: none;
+}
+.company-details-img {
+  flex-shrink: 0;
+  margin-right: 8px;
+  border-radius: 0;
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  background-clip: content-box;
+}
+.company-details-text {
+  align-self: center;
+}
+.distance-badge {
+  position: relative;
+  vertical-align: middle !important;
+  box-sizing: border-box;
+}
+.dist-value {
+  vertical-align: baseline;
+  box-sizing: inherit;
+}
+.company-button {
+  display: flex;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.9);
+}
+.company-button:hover {
+  color: #0a66c2;
+  text-decoration: underline;
+}
+.details-separator::before {
+  content: "\00B7";
+}
+.anchor-jump-to-education {
+  display: flex;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.9);
+}
+/* .anchor-jump-to-education:active,
+.anchor-jump-to-education:focus {
+  outline: none;
+} */
+/* ===================================
+CONNECTIONS
+=================================== */
+.connections-img-container {
+  margin-right: 8px;
+}
+.stack-list {
+}
+.connections-img-wrapper {
+  list-style-position: outside;
+  display: flex;
+}
+.connections-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  object-position: center;
+  background-size: cover;
+  background-position: 50%;
+  border-radius: 50%;
+  background-color: gray;
+}
+.second-img {
+  margin-left: -12px;
+}
+.anchor-connections {
+  color: rgba(0, 0, 0, 0.8);
+}
+.anchor-connections:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0a66c2;
+}
 /* =================================
 MESSAGE BUTTON
 ================================= */
-.profile-buttons {
+.profile-buttons-container {
   display: flex;
   /* padding-top: 12px; */
   box-sizing: border-box;
@@ -195,18 +319,8 @@ MESSAGE BUTTON
   /* vertical-align: baseline; */
 }
 .anchor-button {
-  display: inline-flex;
-  align-items: center;
-  /* text-align: center; */
-  box-sizing: border-box;
-  font-family: inherit;
-  font-weight: 600;
-  border-radius: 16px;
-  padding: 6px 16px;
   margin-right: 8px;
-  font-size: 16px;
-  /* min-height: 32px; */
-  /* max-width: 480px; */
+
   background-color: #0a66c2;
   color: #fff;
 }
@@ -219,14 +333,10 @@ MESSAGE BUTTON
   margin: 0 4px 0 -2px;
 }
 .button--circle {
-  margin-top: 0;
-  height: 32px;
-  width: 32px;
-  min-width: auto;
   color: rgba(0, 0, 0, 0.6);
   background-color: white;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
+
   border: none;
   font-weight: 600;
   text-align: center;
@@ -234,9 +344,61 @@ MESSAGE BUTTON
 .button--circle:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.08);
-  border: 1px solid black;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.6);
+}
+.profile-button:focus {
+  /* outline-style: double; */
+  outline: none;
+}
+.profile-button:active,
+.button--circle:active {
+  outline: none !important;
 }
 
+/* ==============Text Style of buttons============ */
+.profile-button {
+  box-sizing: border-box;
+  font-family: inherit;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 16px;
+  /* font-weight: 600; */
+  border-radius: 16px;
+  font-size: 16px;
+}
+.dropdown-div {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.dropdown-content {
+  position: absolute;
+  /* display: inline-block; */
+  box-sizing: border-box;
+  padding: 4px 0;
+  left: 0;
+  top: calc(100% + 8px);
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  width: max-content;
+  z-index: 1;
+}
+.dropdown-item {
+  color: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  box-sizing: border-box;
+  font-size: 14px;
+  /* font-weight: 600; */
+  font-style: normal;
+}
+.dropdown-item:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.08);
+}
 /* ========================
 FOOTER
 ======================== */

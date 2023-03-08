@@ -107,7 +107,12 @@ function SkillItem({ id, skill, companies, isLoading }) {
           <li>
             <div className="display-flex margin-top-bottom-4">
               <div className="right-margin-8">
-                <img width="24" height="24" loading="lazy" src="" />
+                <img
+                  width="24"
+                  height="24"
+                  loading="lazy"
+                  src="https://media.licdn.com/dms/image/C560BAQFKNxOZ4X0g8Q/company-logo_100_100/0/1670610916338?e=1686182400&v=beta&t=xVibPYIeMo9ioMrLZ6IaktH1Y3cyyIX32ZRHGTx7Ju8"
+                />
               </div>
               <div className="display-flex align-items-center">
                 <div className="inline-show-more-text">
@@ -124,7 +129,13 @@ function SkillItem({ id, skill, companies, isLoading }) {
             <a className="skill-anchor-tag" target="_self" href="">
               <div className="display-flex">
                 <div className="right-margin-8">
-                  <img width="24" height="24" loading="lazy" src="" />
+                  <img
+                    className="img-centered"
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    src="https://media.licdn.com/dms/image/D5603AQG0sE1PfdibwA/profile-displayphoto-shrink_100_100/0/1671662502941?e=1683763200&v=beta&t=BlTlSXk45nt_E7X2Vy8eKjWL_ZMpzAatBN8mVUGPPxs"
+                  />
                 </div>
                 <div className="inline-show-more-text display-flex align-items-center">
                   <span className="color-action">

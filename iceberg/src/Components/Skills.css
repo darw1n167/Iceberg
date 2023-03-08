@@ -57,6 +57,11 @@ body {
   /* text-decoration-color: unset; */
   cursor: pointer;
 }
+.img-centered {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
 .color-action:hover {
   text-decoration: underline;
   color: var(--color-action);
