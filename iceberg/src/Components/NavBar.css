@@ -1,0 +1,186 @@
+.top-nav {
+    display: flex;
+    height: 60px;
+    width: 40%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border: solid lightgrey 1px;
+    background-color: white;
+    padding:0 30px;
+  }
+  
+.top-nav div {
+    display: flex;
+    align-items: center;
+  }
+  
+.home, .home a {
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    flex-direction:column;
+    min-width: 80px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+
+  }
+
+.home:hover, .home a:hover {
+    color: black;
+
+}
+
+.jobs, .jobs a {
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    flex-direction:column;
+    min-width: 80px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+
+  }
+
+.jobs:hover, .jobs a:hover {
+    color: black;
+
+}
+
+.network, .network a {
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    flex-direction:column;
+    width: max-content;
+    font-size: 12px;
+    font-weight: 400;
+
+  }
+
+.network:hover, .network a:hover {
+    color: black;
+
+}
+
+.messaging, .messaging a {
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    flex-direction:column;
+    min-width: 80px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+
+  }
+
+.messaging:hover, .messaging a:hover {
+    color: black;
+}
+
+.notifications, .notifications a {
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    flex-direction:column;
+    min-width: 80px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+
+  }
+
+.notifications:hover, .notifications a:hover {
+    color: black;
+}
+
+.me, .me a {
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    flex-direction:column;
+    min-width: max-content;
+    text-align: center;
+    min-width: 80px;
+    font-size: 12px;
+    font-weight: 400;
+
+  }
+.me a {
+    min-width: max-content;
+}
+
+.me:hover, .me a:hover {
+    color: black;
+}
+
+
+.work, .work a {
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    min-width: 80px;
+    font-size: 12px;
+    font-weight: 400;
+
+  }
+.work a{
+    min-width: max-content;
+}
+
+.work:hover, .work a:hover {
+    color: black;
+}
+
+.premium a{
+    color: #915907;
+    text-decoration: underline;
+    text-decoration-color: #915907;
+    min-width: 80px;
+    text-align: center;
+}
+
+.premium a:hover{
+    color: #402804;
+    text-decoration: underline;
+}
+
+.search-input{
+    border: none;
+    background-color: none;
+    width: 980px;
+
+}
+.search-box{
+    border-color: rgba(0, 0, 0, 0.08);
+    border: solid 1px transparent;
+    background-color: #eef3f8;
+    flex-grow: 1;
+}
+
+.insideSearch{
+    max-width: 280px;
+    position: relative;
+}
+.insideSearch:focus, .insideSearch:active{
+    max-width: 384px;
+}
+
+.insideinsideSearch{
+    display: block;
+    width: 100%;
+    z-index: 0;
+}
+
+.nav-logo{
+    color: rgb(10,102,194);
+}
+
+.pfp{
+    border-radius: 50%;
+}

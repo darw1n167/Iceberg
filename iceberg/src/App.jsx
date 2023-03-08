@@ -5,8 +5,9 @@ import Skills from './Skills';
 import Experience from './Components/Experience';
 import Education from './Components/Education';
 import ActivityFeed from './Components/Acitivity';
-import About from './components/About';
+// import About from './components/About';
 import Footer from './Components/footer';
+import NavBar from './Components/NavBar';
 
 export const ExperienceContext = React.createContext();
 
@@ -27,10 +28,11 @@ function App() {
 	return (
 		<>
 			<ExperienceContext.Provider value={{ experience, setExperience }}>
+        <NavBar />
 				<Experience />
 				<ActivityFeed />
 				<Education />
-				<About />
+				{/* <About /> */}
 				<Skills />
 				<Footer />
 			</ExperienceContext.Provider>
