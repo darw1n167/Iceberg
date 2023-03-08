@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import './App.css';
-import Skills from './Skills';
+import Skills from './Components/Skills';
 import Experience from './Components/Experience';
 import Education from './Components/Education';
 import ActivityFeed from './Components/Acitivity';
