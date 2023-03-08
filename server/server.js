@@ -32,14 +32,14 @@ app.get("/users", async (req, res) => {
     res.status(500).json({ error: "server error" });
   }
 });
-// app.get('/all', async (req, res) => {
-//    try {
-//       const data = await sql`SELECT * FROM skill`
-//       res.json(data)
-//    } catch (error) {
-//       res.status(500).json({error})
-//    }
-// })
+app.get("/connections", async (req, res) => {
+  try {
+    const data = await sql`SELECT * FROM poss_connections`;
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ error });
+  }
+});
 
 app.get("/profile", async (req, res) => {
   try {
