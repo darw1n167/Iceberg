@@ -8,6 +8,8 @@ import ActivityFeed from './Components/Acitivity';
 import About from './Components/About';
 import MayKnow from './Components/MayKnow.jsx'
 import Footer from './Components/footer';
+import TopAd from "./Components/TopAd";
+import BottomAd from "./Components/BottomAd"
 
 export const ExperienceContext = React.createContext();
 
@@ -32,6 +34,8 @@ function App() {
 			<Experience />
 			<ActivityFeed />
 			<Education />
+			<TopAd/>
+			<BottomAd />
 			<About />
 			<Skills />
 			<MayKnow />
