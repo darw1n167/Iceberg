@@ -39,6 +39,10 @@ function App() {
           <Education />
           <About />
           <Skills />
+			 <MayKnow />
+			 <Footer />
+			 <TopAd />
+			 <BottomAd />
         </ExperienceContext.Provider>
       </ProfileProvider>
     </>

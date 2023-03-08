@@ -53,6 +53,16 @@ From BOTH the iceberg and server folder, run the following command:
 $ npm i
 ```
 
+Set up and seed a database on your local system.
+
+
+Set up an `.env` file using the template provided in the server folder. 
+```
+PORT = 8000
+DATABASE_URL = postgres://{user}:{password}@localhost:5432/{database name}
+```
+
+
 From the server folder, run the following command to start the server and client:
 ```
 $ npm run dev
