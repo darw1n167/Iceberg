@@ -31,13 +31,16 @@ function App() {
 
   return (
     <>
-      <ExperienceContext.Provider value={{ experience, setExperience }}>
-        <Experience />
-        <ActivityFeed />
-        <Education />
-        <About />
-        <Skills />
-      </ExperienceContext.Provider>
+      <ProfileProvider>
+        <ExperienceContext.Provider value={{ experience, setExperience }}>
+          <Profile />
+          <Experience />
+          <ActivityFeed />
+          <Education />
+          <About />
+          <Skills />
+        </ExperienceContext.Provider>
+      </ProfileProvider>
     </>
   );
 }
