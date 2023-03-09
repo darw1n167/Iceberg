@@ -109,10 +109,3 @@
 .play-btn:hover {
     border: 2px solid white;
 }
-
-.top-list-item {
-    display: flex;
-    cursor: pointer;
-    margin-top: 0rem;
-    height: 63px;
-}
