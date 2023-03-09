@@ -1,5 +1,6 @@
 import React from "react";
 import './NavBar.css';
+// import NavPfp from '../assets/navbarpfp';
 
 const NavBar = () => {
     return (
@@ -10,14 +11,14 @@ const NavBar = () => {
             </svg>
       </div>
       <div className="search-box">
-            <div className="insideSearch">
-                <div className="insideinsideSearch">
+            {/* <div className="insideSearch">
+                <div className="insideinsideSearch"> */}
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" className="mercado-match" width="16" height="16" focusable="false">
                     <path d="M14.56 12.44L11.3 9.18a5.51 5.51 0 10-2.12 2.12l3.26 3.26a1.5 1.5 0 102.12-2.12zM3 6.5A3.5 3.5 0 116.5 10 3.5 3.5 0 013 6.5z"></path>
                     </svg>
                     <input className="search-input" type="text" placeholder="Search" />
-                </div>
-            </div>
+                {/* </div>
+            </div> */}
         </div>
         <div className="nav-links">
             <div className="home">
@@ -51,10 +52,10 @@ const NavBar = () => {
                 <a href="#">Notifications</a>
             </div>
             <div className="me">
-                <img width="24" src="https://media.licdn.com/dms/image/D4E35AQG9LfYLVDUE5w/profile-framedphoto-shrink_100_100/0/1677707629718?e=1678896000&amp;v=beta&amp;t=TWyAEpbBnZGoJwyz9wcqSIRXyrlPYTnVlTKt3k3tRPg" height="24" alt="Brian Hernandez Ortiz" id="ember16" class="global-nav__me-photo ember-view"></img>
+                <img className="pfp" width="24" src="https://media.licdn.com/dms/image/D4E35AQG9LfYLVDUE5w/profile-framedphoto-shrink_100_100/0/1677707629718?e=1678896000&amp;v=beta&amp;t=TWyAEpbBnZGoJwyz9wcqSIRXyrlPYTnVlTKt3k3tRPg" height="24" alt="Brian Hernandez Ortiz" id="ember16"></img>
                 <div>
-                <a href="#">Me</a>
-                    <svg className="pfp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
+                    <a href="#">Me</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" class="mercado-match" width="16" height="16" focusable="false">
                     <path d="M8 11L3 6h10z" fill-rule="evenodd"></path>
                     </svg>
                 </div>

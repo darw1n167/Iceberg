@@ -1,6 +1,6 @@
 .top-nav {
     display: flex;
-    height: 60px;
+    height: 50px;
     width: 40%;
     position: fixed;
     top: 0;
@@ -109,6 +109,8 @@
     font-weight: 400;
 
   }
+
+
 .me a {
     min-width: max-content;
 }
@@ -116,7 +118,6 @@
 .me:hover, .me a:hover {
     color: black;
 }
-
 
 .work, .work a {
     color: #666;
@@ -129,6 +130,11 @@
     font-weight: 400;
 
   }
+
+.work{
+    border-left: 1px solid lightgrey;
+}  
+
 .work a{
     min-width: max-content;
 }
@@ -141,8 +147,12 @@
     color: #915907;
     text-decoration: underline;
     text-decoration-color: #915907;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    line-height: 52px;
     min-width: 80px;
-    text-align: center;
+    position: relative;
 }
 
 .premium a:hover{
@@ -150,20 +160,35 @@
     text-decoration: underline;
 }
 
+.search-box{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 0.4rem;
+    height: 22px;
+    width: 300px;
+    color: lightgrey;
+    background-color: #eef3f8;
+    font-size: 14px;
+    font-weight: 400;
+}
+
 .search-input{
     border: none;
-    background-color: none;
-    width: 980px;
-
-}
-.search-box{
-    border-color: rgba(0, 0, 0, 0.08);
-    border: solid 1px transparent;
-    background-color: #eef3f8;
-    flex-grow: 1;
+    background-color: transparent;
+    outline: none;
+    min-width: 95%;
 }
 
-.insideSearch{
+.search-input:focus {
+    outline: none; /* remove the default focus outline */
+  }
+  
+  .search-box:focus-within {
+    outline: 2px solid rgb(10,102,194); /* add blue outline when search-input is focused */
+  }
+  
+/* .insideSearch{
     max-width: 280px;
     position: relative;
 }
@@ -175,7 +200,7 @@
     display: block;
     width: 100%;
     z-index: 0;
-}
+} */
 
 .nav-logo{
     color: rgb(10,102,194);
