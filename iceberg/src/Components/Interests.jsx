@@ -1,4 +1,4 @@
-import '../Interests.css'
+import './Interests.css'
 import { useState } from 'react'
 import TopVoices from './TopVoices'
 import Companies from './Companies'
