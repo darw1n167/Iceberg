@@ -42,6 +42,15 @@ app.get('/viewed', async (req, res) => {
 	}
 });
 
+app.get('/users', async (req, res) => {
+	try {
+		const data = await sql`SELECT * FROM users`;
+		res.status(200).json(data);
+	} catch (error) {
+		res.status(500).json({ error: 'server error' });
+	}
+});
+
 app.get('/all', async (req, res) => {
    try {
       const data = await sql`SELECT * FROM skill`
