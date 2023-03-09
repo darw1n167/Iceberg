@@ -12,11 +12,13 @@ import Footer from "./Components/footer";
 import TopAd from "./Components/TopAd";
 import BottomAd from "./Components/BottomAd";
 import PeopleAlsoViewed from './Components/PeopleAlsoViewed';
-import InLearning from './Components/InLearning'
+import Interests from './Components/Interests'
 
 import { ProfileProvider } from "./context/ProfileContext";
 
 export const ExperienceContext = React.createContext();
+
+
 
 export const API_URL = "http://localhost:8000";;
 
@@ -46,7 +48,7 @@ function App() {
 				<TopAd />
 				<BottomAd />
 				<PeopleAlsoViewed />
-				<InLearning />
+				<Interests />
 			</ExperienceContext.Provider>
       </ProfileProvider>
 		</>
