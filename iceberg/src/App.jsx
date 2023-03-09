@@ -1,12 +1,12 @@
 import './App.css'
-import InLearning from './components/InLearning'
+import Interests from './components/Interests'
 
 
 function App() {
 
   return (
     <>
-      <InLearning />
+      <Interests />
     </>
   )
 }

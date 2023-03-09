@@ -15,7 +15,6 @@ app.use(morgan('tiny'))
 const PORT = process.env.PORT
 const sql = postgres(process.env.DATABASE_URL)
 
-
 app.get('/all', async (req, res) => {
    try {
       const data = await sql`SELECT * FROM skill`
@@ -25,6 +24,35 @@ app.get('/all', async (req, res) => {
    }
 })
 
-app.listen(PORT, () => {
+app.get("/company", async (req, res) => {
+   try {
+     const data = await sql`SELECT * FROM company;`;
+     res.status(200).json(data);
+   } catch (error) {
+     res.status(500).json({ error: "server error" });
+   }
+ });
+
+ app.get("/profile", async (req, res) => {
+   try {
+     const result =
+       await sql`SELECT * FROM experience JOIN company ON experience.company_id = company.id;;`;
+     res.json(result);
+     console.log(result);
+   } catch (error) {
+     res.status(500).json({ error });
+   }
+ });
+ 
+ app.get("/skills", async (req, res) => {
+   try {
+     const data = await sql`SELECT * FROM skill`;
+     res.json(data);
+   } catch (error) {
+     res.status(500).json({ error: "server error" });
+   }
+ });
+ 
+ app.listen(PORT, () => {
    console.log(`listening on port: ${PORT}`);
-})
+ });
