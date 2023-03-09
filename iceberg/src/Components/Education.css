@@ -13,12 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-container {
-   width: 758px;
    padding: 24px 24px;
-   outline-width: 1px;
-   outline-color: rgb(216, 216, 216);
-   outline-style: solid;
-   border-radius: 0.8rem;
 }
 
 .entry-container {

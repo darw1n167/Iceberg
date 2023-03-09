@@ -22,7 +22,7 @@ const MayKnow = () => {
    return (
       
       <People.Provider value={people}>
-         <div className='container'>
+         <div className='component container'>
             <div className='cards'>
                <div><span className='bold component-header'>People you may know</span></div>
                {people.map(person => <MayKnowCard key={person.id} person={person} />).slice(0, showMore ? 10 : 5)}

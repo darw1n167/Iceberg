@@ -8,7 +8,7 @@
 }
 
 .company-btn {
-    margin-right: 1rem;
+    margin-left: 0.72rem;
     margin-top: 0.5rem;
     border-radius: 16px;
     background-color: transparent;
@@ -48,7 +48,7 @@
 }
 
 .group-btn {
-    margin-right: 10.5rem;
+    margin-left: 0.71rem;
     margin-top: 0.5rem;
     border-radius: 16px;
     background-color: transparent;
@@ -68,7 +68,7 @@
 }
 
 .join-btn {
-    margin-right: 13.2rem;
+    margin-left: 0.7rem;
     margin-top: 0.5rem;
     border-radius: 16px;
     background-color: transparent;
@@ -88,7 +88,7 @@
 }
 
 .join-btn2 {
-    margin-right: 12rem;
+    margin-left: 0.7rem;
     margin-top: 0.5rem;
     border-radius: 16px;
     background-color: transparent;
@@ -109,6 +109,7 @@
 
 .school-btn {
     margin-top: 0.5rem;
+    margin-left: 0.7rem;
     border-radius: 16px;
     background-color: transparent;
     border: 2px solid silver;
@@ -147,9 +148,7 @@
 }
 
 .Interests-div {
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 8px;
-    width: 750px;
+    background-color: white;
 }
 
 .Interests-title {
@@ -187,11 +186,11 @@
     font-size: 14px;
     color: rgb(106, 106, 106);
     font-weight: 550;
+    transition: 0.3s;
 }
 
 .tab-item1:active {
-    color: green;
-    border-bottom: 3px solid green;
+    background-color: rgb(226, 226, 226);
 }
 
 .tab-item {
@@ -202,12 +201,11 @@
     font-size: 14px;
     color: rgb(106, 106, 106);
     font-weight: 550;
+    transition: 0.3s;
 }
 
 .tab-item:active {
-    color: green;
-    border-bottom: 3px solid green;
-    text-decoration-color: green;
+    background-color: rgb(226, 226, 226);
 }
 
 .title-img {

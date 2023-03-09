@@ -4,7 +4,7 @@ import { useRef, useState, useEffect, useContext } from "react";
 import ProfileContext from "../context/ProfileContext";
 function Profile() {
   return (
-    <section className="entire-profile-section">
+    <section className="component entire-profile-section">
       <div className="live-video-hero-image" tabIndex="-1">
         <div className="profile-background-image__image-container">
           <img
@@ -98,7 +98,7 @@ function ProfileInformation() {
           <h1 className="inline break-words v-align-middle text-heading-large">
             {isLoading
               ? "loading"
-              : users[0].first_name + " mathafakin " + users[0].last_name}
+              : users[0].first_name + ' "The Rock" ' + users[0].last_name}
           </h1>
           <span className="distance-badge  text-body-small">
             <span className="dist-value details-separator">
@@ -106,7 +106,7 @@ function ProfileInformation() {
               <span>1st</span>
             </span>
           </span>
-          <div className="user-headline break-words">
+          <div className="user-headline-2 break-words">
             {isLoading ? "loading" : users[0].headline}
           </div>
         </div>
@@ -126,7 +126,7 @@ function ProfileInformation() {
           </button>
         </li>
       </ul>
-      <div className="location-details">
+      <div className="location-details margin-top-8">
         <span>{isLoading ? "loading" : users[0].location} </span>{" "}
         <span className="details-separator">
           <a href="" className="link-text">
@@ -140,7 +140,7 @@ function ProfileInformation() {
 function ProfileConnections() {
   return (
     <>
-      <ul>
+      <ul className="margin-top-8">
         <li>
           <a href="">
             <span className="link-text">41 connections</span>

@@ -11,7 +11,7 @@ const Education = () => {
     "JavaScript · Front-End Development · Back-End Web Development · React.js · Node.js · Express.js · SQL · Relational Databases · Object-Oriented Programming (OOP) · p5.js · jQuery · Bootstrap · REST APIs · Hypertext Transfer Protocol (HTTP) · File Systems · AJAX · Document Object Model (DOM) · HTML · Cascading Style Sheets (CSS)";
 
   return (
-    <div id="education" className="section-container">
+    <div id="education" className="component section-container">
       <h2>Education</h2>
       <div className="entry-container">
         <div className="entry-img-sidebar">

@@ -39,20 +39,30 @@ function App() {
 		<>
       <ProfileProvider>
 			<ExperienceContext.Provider value={{ experience, setExperience }}>
-				<Profile />
-        		<NavBar />
-				<Experience />
-				<ActivityFeed />
-				<Education />
-				<About />
-				<Skills />
-				<MayKnow />
+				<div className="full-page">
+					<NavBar />
+					<div className="outer-main">
+						<div className="main-content">
+							<div className="main-body">
+								<Profile />
+								<About />
+								<ActivityFeed />
+								<Experience />
+								<Education />
+								<Skills />
+								<Interests />
+							</div>
+							<div className="side-bar">
+								<TopAd />
+								<PeopleAlsoViewed />
+								<MayKnow />
+								<InLearning />
+								<BottomAd />
+							</div>
+						</div>
+					</div>
 				<Footer />
-				<TopAd />
-				<BottomAd />
-				<PeopleAlsoViewed />
-				<Interests />
-				<InLearning />
+				</div>
 			</ExperienceContext.Provider>
       </ProfileProvider>
 		</>

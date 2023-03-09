@@ -2,7 +2,7 @@ import { API_URL } from '../App';
 import { useEffect, useState } from 'react';
 import { People } from '../context/context';
 
-import './PeopleAlsoViewed.css';
+import './MayKnow.css';
 
 const PeopleViewed = () => {
 	const [showMore, setShowMore] = useState(false);

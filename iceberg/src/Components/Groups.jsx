@@ -1,7 +1,7 @@
 const Groups = () => {
     return (
         <>
-        <div className="group-div">
+        <div className="component group-div">
             <div className="content-div">
                 <img className="group-img" src="https://media.licdn.com/dms/image/C4E07AQEaHEKoGE1wyQ/group-logo_image-shrink_48x48/0/1631371035400?e=1678834800&v=beta&t=VmYvz0e0eVRY9kXW7CCy3LB3f-uF-ECNLjwMaJ9mb3k"/>
                 <div className="group-content">

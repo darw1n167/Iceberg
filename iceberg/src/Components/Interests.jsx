@@ -67,7 +67,7 @@ const Interests = () => {
     }
 
     return (
-        <div className='Interests-div'>
+        <div className='component Interests-div'>
             <div className='Interests-title'>Interests</div>
                 <div className='Interests-tabs'>
                     <div style={{color: tab1Color, borderBottom: tab1Underline}} className='tab-item1' onClick={topVoicesClick}>Top Voices</div>

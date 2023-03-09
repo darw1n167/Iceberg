@@ -38,9 +38,10 @@
   word-break: break-word;
 }
 .text-heading-large {
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
+  font-size:24px;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 30px;
 }
 .text-body-small {
   font-size: 14px;
@@ -48,6 +49,9 @@
 }
 .margin-right-12 {
   margin-right: 12px;
+}
+.margin-top-8{
+  margin-top:8px;
 }
 .t-normal {
   /* color: rgba(0, 0, 0, 0.6); */
@@ -57,7 +61,6 @@
 }
 /* section tag that encompasses the whole component */
 .entire-profile-section {
-  margin-top: 10px;
   background: #fff;
   position: relative;
   border: none;
@@ -215,6 +218,11 @@ PROFILE INFORMATION
 .profile-headline {
   max-width: calc(100% - 232px - 2.4rem);
   line-height: 1rem;
+}
+.user-headline-2{
+  font-size:16px;
+  font-weight:400;
+  line-height: 20px;
 }
 .company-details {
   margin-top: 8px;

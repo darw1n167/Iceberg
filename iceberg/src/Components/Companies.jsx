@@ -1,13 +1,27 @@
+import {useState} from 'react'
+
 const Companies = () => {
+
+    const [follow, setFollow] = useState(false)
+    const [follow2, setFollow2] = useState(false)
+
+    const handleClick = () => {
+        setFollow(!follow)
+    }
+
+    const handleClick2 = () => {
+        setFollow2(!follow2)
+    }
+
     return (
         <>
-        <div className="group-div">
+        <div className="component group-div">
             <div className="content-div">
                 <img className="group-img" src="https://media.licdn.com/dms/image/C560BAQG-22OtXJPGpA/company-logo_100_100/0/1568751879393?e=1686182400&v=beta&t=PLEUp4q4nj6b5JOUVVTypSnVwo1ssurCJNzeo-ykL8Y"/>
                 <div className="group-content">
                     <div className="group-title">Slack</div>
                     <div className="group-followers">1,229,646 followers</div>
-                    <button className="company-btn">+ Follow</button>
+                    <button className="company-btn" onClick={handleClick}>{follow ? 'following' : '+ follow'}</button>
                 </div>
             </div>
             <div className="content2-div">
@@ -15,7 +29,7 @@ const Companies = () => {
                 <div className="group-content">
                     <div className="group-title">Microsoft</div>
                     <div className="group-followers">19,127,253</div>
-                    <button className="company-btn2">+ Follow</button>
+                    <button className="company-btn2" onClick={handleClick2}>{follow2 ? 'following' : '+ follow'}</button>
                 </div>
             </div>
         </div>

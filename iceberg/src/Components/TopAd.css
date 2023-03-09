@@ -1,9 +1,8 @@
 .TopAdAll{
     border: solid lightgray 1px;
     border-radius: 10px;
-    padding: 12px;
     height: 300px;
-    width: 300px;
+    width: 100%;
 }
 
 .images{

@@ -5,13 +5,9 @@
 }
 
 .profile-activity {
-	max-width: 900px;
-	margin: 0 auto;
 	padding: 10px;
-	border: 1px solid #d3d3d3;
-	border-bottom: 0px;
-	border-top-left-radius: 1rem;
-	border-top-right-radius: 1rem;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
 	font-family: 'Helvetica Neue', sans-serif;
 }
 
@@ -38,12 +34,9 @@
 }
 
 .activity-show-all-container {
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 10px;
-	border: 1px solid #d3d3d3;
-	border-bottom-left-radius: 1rem;
-	border-bottom-right-radius: 1rem;
+	padding: 10px 0px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
 	font-family: 'Helvetica Neue', sans-serif;
 	display: flex;
 	justify-content: center;

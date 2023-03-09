@@ -1,8 +1,6 @@
 .footer-container-wrapper {
 	display: flex;
 	justify-content: center;
-	margin: 0 100px;
-	max-width: 1200px;
 }
 
 .linked-in-logo {
@@ -38,7 +36,7 @@
 
 .dropdown-list {
 	position: absolute;
-	top: -110px;
+	top: -85px;
 	left: 0;
 	z-index: 1;
 	background-color: white;

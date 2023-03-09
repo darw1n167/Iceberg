@@ -1,12 +1,21 @@
 .ExpAll{
-    border: solid lightgray 1px;
-    border-radius: 10px;
+    font-family: var(--artdeco-reset-typography-font-family-sans);
+    padding: 24px;
 }
 
 .title{
     font-weight: bold;
 }
-
+.h2-title{
+    font-size:20px;
+}
+.experience-content{
+    display:flex;
+}
+.experience-company-img{
+    width:max-content;
+    margin-right:8px;
+}
 .job{
     font-weight: bold;
 }

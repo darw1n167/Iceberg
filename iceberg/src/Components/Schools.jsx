@@ -1,7 +1,7 @@
 const Schools = () => {
     return (
         <>
-        <div className="group-div">
+        <div className="component group-div">
             <div className="content-div">
                 <img className="group-img" src="https://media.licdn.com/dms/image/C560BAQHrP1umKnHBrg/company-logo_100_100/0/1671479990719?e=1686182400&v=beta&t=5jeIXL_CmoBmcRxzox-BF2lv5PBQeQr__iC1xU4ZKQU"/>
                 <div className="group-content">

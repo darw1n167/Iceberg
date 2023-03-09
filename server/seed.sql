@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS users, company, skill, experience, poss_connections;
+DROP TABLE IF EXISTS users, company, skill, experience, poss_connections, people_viewed;
 
 CREATE TABLE users (
     id SERIAL,
