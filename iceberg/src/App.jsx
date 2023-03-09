@@ -13,6 +13,7 @@ import TopAd from "./Components/TopAd";
 import BottomAd from "./Components/BottomAd";
 import PeopleAlsoViewed from './Components/PeopleAlsoViewed';
 import Interests from './Components/Interests'
+import InLearning from "./Components/InLearning";
 
 import { ProfileProvider } from "./context/ProfileContext";
 
@@ -49,6 +50,7 @@ function App() {
 				<BottomAd />
 				<PeopleAlsoViewed />
 				<Interests />
+				<InLearning />
 			</ExperienceContext.Provider>
       </ProfileProvider>
 		</>
