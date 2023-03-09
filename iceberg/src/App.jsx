@@ -14,6 +14,7 @@ import BottomAd from "./Components/BottomAd";
 import PeopleAlsoViewed from './Components/PeopleAlsoViewed';
 import Interests from './Components/Interests'
 import InLearning from "./Components/InLearning";
+import NavBar from './Components/NavBar';
 
 import { ProfileProvider } from "./context/ProfileContext";
 
@@ -39,6 +40,7 @@ function App() {
       <ProfileProvider>
 			<ExperienceContext.Provider value={{ experience, setExperience }}>
 				<Profile />
+        		<NavBar />
 				<Experience />
 				<ActivityFeed />
 				<Education />
