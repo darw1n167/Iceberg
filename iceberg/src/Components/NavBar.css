@@ -8,6 +8,7 @@
     border: solid lightgrey 1px;
     background-color: white;
     padding:0 30px;
+    z-index: 10;
   }
   
 .top-nav div {
@@ -161,7 +162,11 @@
 }
 
 .search-box{
-    padding: 10px;
+    opacity: 1;
+    flex-grow: 1;
+    position: relative;
+    max-width: 280px;
+    /* padding: 10px;
     display: flex;
     align-items: center;
     border-radius: 0.4rem;
@@ -170,24 +175,50 @@
     color: lightgrey;
     background-color: #eef3f8;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 400; */
 }
 
 .search-input{
     border: none;
+    box-shadow: none;
+    background-color: #eef3f8;
+    border-radius: 2px;
+    color: rgba(0,0,0,0.9);
+    width: 218px;
+    padding: 0 8px 0 40px;
+    line-height: 1.75;
+    font-weight: 400;
+    font-size: 14px;
+    height: 34px;
+    border-color: #dce6f1;
+    vertical-align: text-top;
+    /* border: none;
     background-color: transparent;
     outline: none;
-    min-width: 95%;
+    min-width: 95%; */
 }
 
-.search-input:focus {
-    outline: none; /* remove the default focus outline */
+.search-icon{
+    width: 40px;
+    position: absolute;
+    z-index: 1;
+    top: 17px;
+    left: 2px;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.15s;
+    color: ;
+}
+
+/* .search-input:focus {
+    outline: none; 
   }
-  
   .search-box:focus-within {
-    outline: 2px solid rgb(10,102,194); /* add blue outline when search-input is focused */
+    outline: 2px solid rgb(10,102,194);
   }
-  
+   */
 /* .insideSearch{
     max-width: 280px;
     position: relative;
