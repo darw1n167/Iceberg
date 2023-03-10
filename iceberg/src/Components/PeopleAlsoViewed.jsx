@@ -19,7 +19,7 @@ const PeopleViewed = () => {
 
 	return (
 		<People.Provider value={people}>
-			<div className='container'>
+			<div className='container component'>
 				<div className='cards'>
 					<div>
 						<span className='bold component-header'>People also viewed</span>

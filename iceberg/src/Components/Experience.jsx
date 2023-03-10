@@ -22,26 +22,27 @@ function Experience() {
         <div>
         {experience.map((exp) => (
           <div key={exp.id}>
-            <p className='job'>{exp.title}</p>
-            <p>United States Department of Defense · Full-time</p>
-            <p className='dates'>
-              {exp.date_started} - {exp.date_ended} · 4 yrs 7 mos
-            </p>
-            <p className='location'> Fort Hood, Texas, United States · On-site </p>
+            <div className='job'>{exp.title}</div>
+            <div className='title'>United States Department of Defense · Full-time</div>
+            <div className='dates'>{exp.date_started} - {exp.date_ended} · 4 yrs 7 mos</div>
+            <div className='location'>Fort Hood, Texas, United States · On-site</div>
+
             <div>
               {exp.description.length > 100 && !showFullText ? (
-                <div>
+                <div className='exp-body'>
                   {exp.description.slice(0, 98)}...
                   <a className='seeMore' href='#' onClick={toggleFullText}>
                     See more
                   </a>
                 </div>
               ) : (
-                <div>{exp.description}</div>
+                <div className='exp-body'>{exp.description}</div>
               )}
             </div>
-            <p>Skills: {exp.skills}</p>
+            <div className='exp-skills'>
+              <span className='exp-bold'>Skills: </span> {exp.skills}
             </div>
+          </div>
         ))}
         </div>
       </div>

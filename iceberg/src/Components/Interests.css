@@ -172,6 +172,7 @@
     transition: 0.3s;
     margin: auto;
     cursor: pointer;
+    text-align: center;
 }
 
 .show-all-div:hover {
@@ -186,7 +187,7 @@
     font-size: 14px;
     color: rgb(106, 106, 106);
     font-weight: 550;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
 .tab-item1:active {
@@ -201,7 +202,7 @@
     font-size: 14px;
     color: rgb(106, 106, 106);
     font-weight: 550;
-    transition: 0.3s;
+    transition: background-color 0.3s;
 }
 
 .tab-item:active {

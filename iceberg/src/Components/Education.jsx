@@ -19,18 +19,13 @@ const Education = () => {
         </div>
         <div className="entry-main">
           <h3>{educationTitle}</h3>
-          <span className="">{fieldOfStudy}</span>
-          <br />
-          <span className="font-light">{duration}</span>
-          <br />
-          <br />
-          <span>{description}</span>
-          <br />
-          <br />
-          <span>
-            <span className="bold">Skills: </span>
+          <div className="edu-field">{fieldOfStudy}</div>
+          <div className="font-light edu-field dates">{duration}</div>
+          <div className="edu-body">{description}</div>
+          <div className="skills">
+            <span className="bold skills">Skills: </span>
             {skills}
-          </span>
+          </div>
         </div>
       </div>
     </div>

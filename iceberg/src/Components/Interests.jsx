@@ -29,10 +29,10 @@ const Interests = () => {
         <div className='component Interests-div'>
             <div className='Interests-title'>Interests</div>
                 <div className='Interests-tabs'>
-                    <div style={activeTab === 'Top Voices' ? {color: 'green', borderBottom: '3px solid green'} : {color: 'rgb(106, 106, 106)', borderBottom: 'transparent'}} className='tab-item1' onClick={topVoicesClick}>Top Voices</div>
-                    <div style={activeTab === 'Companies' ? {color: 'green', borderBottom: '3px solid green'} : {color: 'rgb(106, 106, 106)', borderBottom: 'transparent'}} className='tab-item' onClick={companiesClick}>Companies</div>
-                    <div style={activeTab === 'Groups' ? {color: 'green', borderBottom: '3px solid green'} : {color: 'rgb(106, 106, 106)', borderBottom: 'transparent'}} className='tab-item' onClick={groupsClick}>Groups</div>
-                    <div style={activeTab === 'Schools' ? {color: 'green', borderBottom: '3px solid green'} : {color: 'rgb(106, 106, 106)', borderBottom: 'transparent'}} className='tab-item' onClick={schoolsClick}>Schools</div>
+                    <div style={activeTab === 'Top Voices' ? {color: 'green', borderBottom: '2px solid green'} : {color: 'rgb(106, 106, 106)', borderBottom: 'transparent'}} className='tab-item1' onClick={topVoicesClick}>Top Voices</div>
+                    <div style={activeTab === 'Companies' ? {color: 'green', borderBottom: '2px solid green'} : {color: 'rgb(106, 106, 106)', borderBottom: 'transparent'}} className='tab-item' onClick={companiesClick}>Companies</div>
+                    <div style={activeTab === 'Groups' ? {color: 'green', borderBottom: '2px solid green'} : {color: 'rgb(106, 106, 106)', borderBottom: 'transparent'}} className='tab-item' onClick={groupsClick}>Groups</div>
+                    <div style={activeTab === 'Schools' ? {color: 'green', borderBottom: '2px solid green'} : {color: 'rgb(106, 106, 106)', borderBottom: 'transparent'}} className='tab-item' onClick={schoolsClick}>Schools</div>
                 </div>
             <div className='outlet'>
                 {activeTab === 'Top Voices' ? <TopVoices />

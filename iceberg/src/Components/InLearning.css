@@ -1,14 +1,13 @@
 .InLearning-div {
     width: 100%;
-    height: 378px;
+    height: 405px;
 }
 
 .InLearning-heading {
     text-align: left;
     font-size: 11px;
     display: flex;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+    padding: 1rem;
 }
 
 .InLearning-recommendations {
@@ -17,9 +16,9 @@
 
 .InLearning-skills {
     text-align: left;
-    font-size: 16px;
-    margin-top: 1rem;
-    margin-left: 1rem;
+    font-size: 15px;
+    max-width: 100%;
+    padding: 0px 1rem;
 }
 
 .learning {
@@ -57,12 +56,11 @@
 
 .list-item {
     display: flex;
-    margin-top: 1rem;
-    margin-left: 1rem;
+    margin: 1rem 1rem;
     border-top: 1px solid rgb(226, 226, 226);
     cursor: pointer;
     height: 63px;
-    width: 292px;
+    max-width: 100%;
 }
 
 .list-title {
@@ -96,6 +94,7 @@
     transition: 0.3s;
     margin-top: 1.5rem;
     text-align: center;
+    height: 27px;
 }
 
 .my-recommendations:hover {
@@ -119,10 +118,9 @@
 
 .top-list-item {
     display: flex;
-    margin-top: 1rem;
-    margin-left: 1rem;
+    margin: 1rem;
     border-top: 1px solid rgb(226, 226, 226);
     cursor: pointer;
     height: 63px;
-    width: 292px;
+    max-width: 100%;
 }
