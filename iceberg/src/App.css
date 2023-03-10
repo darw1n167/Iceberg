@@ -1,62 +1,42 @@
-:root{
-    --font-family-sans:-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif;
-
-    --background-color: rgb(243, 242, 239);
-}
-#root{
-    width:100%;
-}
-body {
-   display: flex;
-   justify-content: center;
-   background-color: var(--background-color);
-    font-family: var(--font-family-sans);
-
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* @media screen and (min-width: 768px){
-    .main-content{
-        flex-direction:column;
-    }
-} */
-
-/* GLOBAL CLASSNAME OF ALL OUTER DIV COMPONENTS*/
-.component{
-   background-color: white!important;
-   max-width: 100%;
-   outline-width: 1px;
-   outline-color: rgb(216, 216, 216);
-   outline-style: solid;
-   border-radius: 8px;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
-.full-page{
-    position:relative;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
-.outer-main{
-    position:relative;
-    width:100%;
-    display: flex;
-    justify-content: center;
-}
-.main-content{
-    display:flex;
-    gap: 22px;
-    justify-content: center;
-    padding-top: 75px;
-    width:max-content;
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.main-body{
-    display:flex;
-    flex-direction: column;
-    gap:6px;
-   width: 804px;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.side-bar{
-    display:flex;
-    flex-direction: column;
-    gap:6px;
-   width: 300px;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
