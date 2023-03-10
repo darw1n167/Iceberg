@@ -32,7 +32,7 @@ function Skills() {
   }, []);
 
   return (
-    <section className="entire-component margin-top-8">
+    <section className="component entire-component">
       <div id="skills" className=" padding-top-right-left-12">
         <div className="padding-top-right-left-12">
           <h2 className="component-h2-header">

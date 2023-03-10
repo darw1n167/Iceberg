@@ -2,7 +2,7 @@ import { API_URL } from '../App';
 import { useEffect, useState } from 'react';
 import { People } from '../context/context';
 
-import './PeopleAlsoViewed.css';
+import './MayKnow.css';
 
 const PeopleViewed = () => {
 	const [showMore, setShowMore] = useState(false);
@@ -19,7 +19,7 @@ const PeopleViewed = () => {
 
 	return (
 		<People.Provider value={people}>
-			<div className='container'>
+			<div className='container component'>
 				<div className='cards'>
 					<div>
 						<span className='bold component-header'>People also viewed</span>

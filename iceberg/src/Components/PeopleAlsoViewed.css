@@ -4,7 +4,7 @@
 }
 
 .container {
-	width: 322px;
+	width: 100%;
 	background-color: white;
 }
 
@@ -97,6 +97,9 @@
 	display: flex;
 	margin-bottom: 20px;
 	margin-top: 6px;
+	background-color: transparent;
+	border: 1px solid rgb(130, 130, 130);
+	color: rgb(130, 130, 130);
 }
 
 .card-button-text {

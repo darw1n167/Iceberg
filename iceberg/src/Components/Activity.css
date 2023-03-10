@@ -5,48 +5,45 @@
 }
 
 .profile-activity {
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 10px;
-	border: 1px solid #d3d3d3;
-	border-bottom: 0px;
-	border-top-left-radius: 1rem;
-	border-top-right-radius: 1rem;
-	font-family: 'Helvetica Neue', sans-serif;
+	padding: 24px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+   font-family: var(--artdeco-reset-typography-font-family-sans) !important;
 }
 
 .activity-title {
-	margin-top: 15px;
 	margin-bottom: 0px;
-	font-family: 'Helvetica Neue 700', sans-serif;
+	font-weight: 600;
+   font-family: var(--artdeco-reset-typography-font-family-sans) !important;
 }
 
 .activity-followers {
-	margin-top: 2px;
+	margin-top: 0px;
+	font-size: 14px;
 	color: #656565;
 }
 
 .activity-text {
-	font-family: 'Helvetica Neue 700', sans-serif;
-	font-weight: 700;
+   font-family: var(--artdeco-reset-typography-font-family-sans) !important;
+	font-weight: 600;
 	margin-bottom: 0px;
 }
 
 .activity-description {
 	margin-top: 0px;
 	margin-bottom: 0px;
+	font-size: 14px;
 }
 
 .activity-show-all-container {
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 10px;
-	border: 1px solid #d3d3d3;
-	border-bottom-left-radius: 1rem;
-	border-bottom-right-radius: 1rem;
-	font-family: 'Helvetica Neue', sans-serif;
+	height: 40px;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+   font-family: inherit;
+   font-family: var(--artdeco-reset-typography-font-family-sans) !important;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	border-top: 1px solid #d3d3d3;
 	cursor: pointer;
 }
@@ -56,10 +53,14 @@
 }
 
 .activity-show-all-text {
-	font-weight: bold;
+	font-weight: 600;
 	margin-right: 10px;
+	color: rgb(80, 80, 80);
 	margin-top: 0px;
 	margin-bottom: 0px;
+	
+   font-family: inherit;
+   font-family: var(--artdeco-reset-typography-font-family-sans) !important;
 }
 
 .activity-show-all-icon {

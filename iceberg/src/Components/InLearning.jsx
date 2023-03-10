@@ -1,9 +1,8 @@
-import '../InLearning.css'
+import './InLearning.css'
 
 const InLearning = () => {
     return (
-        <>
-        <div className="InLearning-div">
+        <div className="component InLearning-div">
             <div className="InLearning-heading">
                 <img className='logo-img' src="https://myclouddoor.com/wp-content/uploads/2019/11/Linkedin-logo.png"></img>
                 <div className='learning'>LEARNING</div>
@@ -37,10 +36,7 @@ const InLearning = () => {
                     </div>
                 </div>
             </div>
+            <div className="my-recommendations">See my recommendations</div>
         </div>
-        <div className="my-recommendations">See my recommendations</div>
-        </>
     )
 }
-
-export default InLearning;

@@ -3,7 +3,7 @@ import './Activity.css';
 
 const ProfileActivity = () => {
 	return (
-		<div>
+		<div className='component'>
 			<div className='profile-activity'>
 				<h3 className='activity-title'>Activity</h3>
 				<p className='activity-followers'>39 followers</p>

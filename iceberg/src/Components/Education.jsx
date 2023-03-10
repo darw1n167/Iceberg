@@ -11,7 +11,7 @@ const Education = () => {
     "JavaScript · Front-End Development · Back-End Web Development · React.js · Node.js · Express.js · SQL · Relational Databases · Object-Oriented Programming (OOP) · p5.js · jQuery · Bootstrap · REST APIs · Hypertext Transfer Protocol (HTTP) · File Systems · AJAX · Document Object Model (DOM) · HTML · Cascading Style Sheets (CSS)";
 
   return (
-    <div id="education" className="section-container">
+    <div id="education" className="component section-container">
       <h2>Education</h2>
       <div className="entry-container">
         <div className="entry-img-sidebar">
@@ -19,18 +19,13 @@ const Education = () => {
         </div>
         <div className="entry-main">
           <h3>{educationTitle}</h3>
-          <span className="">{fieldOfStudy}</span>
-          <br />
-          <span className="font-light">{duration}</span>
-          <br />
-          <br />
-          <span>{description}</span>
-          <br />
-          <br />
-          <span>
-            <span className="bold">Skills: </span>
+          <div className="edu-field">{fieldOfStudy}</div>
+          <div className="font-light edu-field dates">{duration}</div>
+          <div className="edu-body">{description}</div>
+          <div className="skills">
+            <span className="bold skills">Skills: </span>
             {skills}
-          </span>
+          </div>
         </div>
       </div>
     </div>

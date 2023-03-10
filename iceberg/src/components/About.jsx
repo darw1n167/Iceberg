@@ -15,7 +15,7 @@ const About = () => {
 
     if (!showMore) {
         return (
-        <div className='about-div'>
+        <div className='component about-div'>
             <div className='about-heading-div'>
                 <div className="about-heading">About</div>
             </div>
@@ -30,7 +30,7 @@ const About = () => {
         )
     } else {
         return (
-            <div className='see-more-div'>
+            <div className='component see-more-div'>
                 <div className='about-heading-div'>
                     <div className='about-heading'>About</div>
                 </div>

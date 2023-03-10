@@ -1,19 +1,11 @@
 .about-heading {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 20px;
-  }
-  
-  .about-heading-div {
-    margin-top: 0.5rem;
   }
   
   .about-div {
     text-align: left;
-    border: 1px solid rgb(226, 226, 226);
-    border-radius: 8px;
-    padding: 1rem;
-    width: 750px;
-    height: 143px;
+    padding: 24px;
   }
   
   .about-content {
@@ -52,10 +44,8 @@
   
   .see-more-div {
     text-align: left;
-    border: 1px solid rgb(226, 226, 226);
     border-radius: 8px;
-    padding: 1rem;
-    width: 750px;
+    padding: 24px;
     height: 200px;
   }
 
