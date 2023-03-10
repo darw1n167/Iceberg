@@ -18,7 +18,7 @@ const TopVoices = () => {
                 </div>
                 <div className="user-headline">Co-Founder & CEO of AlgoExpert | Ex-Google & Ex-Facebook Software Engineer | LinkedIn Top Voice</div>
                 <div className="group-followers">468,836 followers</div>
-                <button className="group-btn" onClick={handleClick}>{follow ? 'following' : '+ follow'}</button>
+                <button className="group-btn" onClick={handleClick}>{follow ? 'Following' : '+ Follow'}</button>
             </div>
         </div>
     )
