@@ -21,7 +21,7 @@ const Companies = () => {
                 <div className="group-content">
                     <div className="group-title">Slack</div>
                     <div className="group-followers">1,229,646 followers</div>
-                    <button className="company-btn" onClick={handleClick}>{follow ? 'following' : '+ follow'}</button>
+                    <button className="company-btn" onClick={handleClick}>{follow ? 'Following' : '+ Follow'}</button>
                 </div>
             </div>
             <div className="content2-div">
@@ -29,7 +29,7 @@ const Companies = () => {
                 <div className="group-content">
                     <div className="group-title">Microsoft</div>
                     <div className="group-followers">19,127,253</div>
-                    <button className="company-btn2" onClick={handleClick2}>{follow2 ? 'following' : '+ follow'}</button>
+                    <button className="company-btn2" onClick={handleClick2}>{follow2 ? 'Following' : '+ Follow'}</button>
                 </div>
             </div>
         </div>

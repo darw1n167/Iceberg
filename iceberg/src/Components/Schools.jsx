@@ -1,4 +1,18 @@
+import { useState } from "react"
+
 const Schools = () => {
+
+    const [follow, setFollow] = useState(false)
+    const [follow2, setFollow2] = useState(false)
+
+    const handleClick = () => {
+        setFollow(!follow)
+    }
+
+    const handleClick2 = () => {
+        setFollow2(!follow2)
+    }
+
     return (
         <>
         <div className="component group-div">
@@ -7,7 +21,7 @@ const Schools = () => {
                 <div className="group-content">
                     <div className="group-title">Hack Reactor</div>
                     <div className="group-followers">24,781 followers</div>
-                    <button className="school-btn">+ Follow</button>
+                    <button className="school-btn" onClick={handleClick}>{follow ? 'Following' : '+ Follow'}</button>
                 </div>
             </div>
             <div className="school-div">
@@ -15,7 +29,7 @@ const Schools = () => {
                 <div className="group-content">
                     <div className="group-title">Galvanize</div>
                     <div className="group-followers">18,750 followers</div>
-                    <button className="school-btn">+ Follow</button>
+                    <button className="school-btn" onClick={handleClick2}>{follow2 ? 'Following' : '+ Follow'}</button>
                 </div>
             </div>
         </div>
