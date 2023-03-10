@@ -14,7 +14,7 @@ const TopAd = () => {
                 <img className='fedResAd' src={FedResAd} alt='Federal Reserve Ad'></img>
             </div>
             <h2 className='headerBottom'> Brian, keep up with the latest insights from <span className='companyName'>Federal Reserve Financial</span></h2>
-            <button>Follow</button>
+            <button className="Follow-button">Follow</button>
         </div>
 	);
 };
