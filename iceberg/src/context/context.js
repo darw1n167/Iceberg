@@ -1,6 +1,2 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
-const PeopleContext = createContext([]);
-
-export default PeopleContext;
-export const People = createContext([])
