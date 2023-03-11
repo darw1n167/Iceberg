@@ -98,7 +98,7 @@ function ProfileInformation() {
           <h1 className="inline break-words v-align-middle text-heading-large">
             {isLoading
               ? "loading"
-              : users[0].first_name + ' "Machoman" ' + users[0].last_name}
+              : users[0].first_name + ' "The Rock" ' + users[0].last_name}
           </h1>
           <span className="distance-badge  text-body-small">
             <span className="dist-value details-separator">
