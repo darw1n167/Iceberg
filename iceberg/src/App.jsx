@@ -25,6 +25,8 @@ export const API_URL = 'http://localhost:8000';
 
 function App() {
 
+	const [experience, setExperience] = useState([]);
+
 	useEffect(() => {
 		async function fetchExperience() {
 			const response = await fetch(`${API_URL}/profile`);
