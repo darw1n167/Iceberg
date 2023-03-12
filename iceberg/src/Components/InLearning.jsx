@@ -40,3 +40,5 @@ const InLearning = () => {
         </div>
     )
 }
+
+export default InLearning

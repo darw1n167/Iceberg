@@ -119,7 +119,7 @@ function Footer() {
 									<div>
 									<svg
 										xmlns='http://www.w3.org/2000/svg'
-										view Box='0 0 24 24'
+										viewBox='0 0 24 24'
 										data-supported-dps='24x24'
 										fill='grey'
 										className='mercado-match'
