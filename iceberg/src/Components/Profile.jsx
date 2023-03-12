@@ -44,7 +44,7 @@ function ProfilePhoto() {
           <div className="badges">
             <span
               className="individual-badge premium-color"
-              title="Jacob is a Bad Ass"
+              title="Jacob is a Premium member"
             >
               <li-icon>
                 <svg
@@ -199,7 +199,7 @@ function ProfileMessageButtons() {
 
   useEffect(() => {
     const handleClickOutside = (e) => {
-      if (ref.current && !ref.current.contains(event.target)) {
+      if (ref.current && !ref.current.contains(e.target)) {
         setIsVisible(false);
       }
     };
