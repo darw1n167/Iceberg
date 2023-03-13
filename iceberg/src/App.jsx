@@ -8,7 +8,7 @@ import Education from './Components/Education';
 import ActivityFeed from './Components/Acitivity';
 import About from './Components/About';
 import MayKnow from './Components/MayKnow.jsx';
-import Footer from './Components/footer';
+import Footer from './Components/Footer';
 import TopAd from './Components/TopAd';
 import BottomAd from './Components/BottomAd';
 import PeopleAlsoViewed from './Components/PeopleAlsoViewed';
