@@ -1,10 +1,13 @@
 .TopAdAll{
     /* border: solid lightgray 1px; */
-    border-radius: 10px;
     /* height: 300px; */
     /* width: 100%; */
     position: relative;
-    gap: 20px;
+}
+
+.AdText{
+    margin-right: 10px;
+    font-size: 12px;
 }
 
 .Ad-Topright{
@@ -16,6 +19,10 @@
     align-items: center;
     width: 80px; /* or adjust to your desired width */
     height: 24px; /* or adjust to your desired height */
+}
+
+.Ad-Topright svg:hover{
+    cursor: pointer;
 }
 
 .images{
@@ -44,6 +51,7 @@ gap: 20px;
     margin-top: 20px;
     font-size: 12px;
     margin-left: 5px;
+    font-weight: 400;
     /* line-height: 16px; */
     /* max-height: 32px; */
 }
@@ -79,12 +87,17 @@ gap: 20px;
     height: 30px;
     color: #0A66C2;
     font-weight: 550;
-    font-size: 13px;
+    font-size: 15px;
     /* transition: 0.3s; */
     cursor: pointer;
     /* text-align: center; */
 }
 .TopAdAll button:hover{
- cursor: pointer;
- background-color: rgb(196, 221, 254);
+    transition: 0.3s;
+    cursor: pointer;
+    background-color: rgb(226, 233, 243);
+    box-shadow: inset 0 0 0 1px rgb(10, 102, 194);
+}
+.TopAdAll button:active{
+    outline: none !important;
 }
