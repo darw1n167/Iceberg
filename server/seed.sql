@@ -32,6 +32,7 @@ CREATE TABLE experience (
     description TEXT,
     date_started TEXT,
     date_ended TEXT,
+    skills text,
     company_id INTEGER,
     FOREIGN KEY (company_id)
     REFERENCES company(id)
@@ -67,11 +68,11 @@ VALUES('JavaScript',3, 1),
 ('Front-End Development',3,1),
 ('Back-End Web Development',3,1);
 
-INSERT INTO experience (company_id,title,date_started,date_ended, description)
+INSERT INTO experience (company_id,title,date_started,date_ended, description, skills)
 VALUES(2,'Jul 2018','Jan 2023','Infantry Squad Leader','Responsible for the discipline, training, control, conduct and welfare of 10
 soldiers at all times.
 Signed for and responsible for the condition, care, and effective use of the squads equipment.Responsible for the discipline, training, control, conduct and welfare of 10 soldiers at all times. Signed for and responsible for the condition, care, and effective use of the squads equipment.'
-,'Team Leadership · Veterans · Supervisory Skills · Personnel Management');
+,'Team Leadership - Veterans - Supervisory Skills - Personnel Management');
 
 INSERT INTO poss_connections (name, headline, pic_url)
     VALUES
