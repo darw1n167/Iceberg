@@ -7,7 +7,7 @@ export const ProfileProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const getUsers = async () => {
-    const response = await fetch("http://localhost:8000/users");
+    const response = await fetch("https://iceberg.onrender.com/users");
     const data = await response.json();
     setUsers(data);
     setIsLoading(false);

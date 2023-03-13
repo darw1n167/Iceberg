@@ -21,7 +21,7 @@ import { ProfileProvider } from './context/ProfileContext';
 
 export const ExperienceContext = React.createContext();
 
-export const API_URL = 'http://localhost:8000';
+export const API_URL = 'https://iceberg.onrender.com';
 
 function App() {
 
