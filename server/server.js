@@ -51,24 +51,6 @@ app.get('/users', async (req, res) => {
 	}
 });
 
-app.get('/all', async (req, res) => {
-   try {
-      const data = await sql`SELECT * FROM skill`
-      res.json(data)
-   } catch (error) {
-      res.status(500).json({error})
-   }
-})
-
-app.get("/company", async (req, res) => {
-   try {
-     const data = await sql`SELECT * FROM company;`;
-     res.status(200).json(data);
-   } catch (error) {
-     res.status(500).json({ error: "server error" });
-   }
- });
-
  app.get("/profile", async (req, res) => {
    try {
      const result =

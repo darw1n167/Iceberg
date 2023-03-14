@@ -9,7 +9,9 @@ export const ProfileProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const getUsers = async () => {
+
     const response = await fetch(`${API_URL}/users`);
+
     const data = await response.json();
     setUsers(data);
     setIsLoading(false);

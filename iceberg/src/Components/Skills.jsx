@@ -9,7 +9,9 @@ function Skills() {
   const [isLoading, setIsLoading] = useState(true);
 
   const getCompany = async () => {
+
     const response = await fetch(`${API_URL}/company`);
+
     const data = await response.json();
     const companyObj = {};
     for (const company of data) {
@@ -23,7 +25,9 @@ function Skills() {
   };
 
   const getSkills = async () => {
+
     const response = await fetch(`${API_URL}/skills`);
+
     const data = await response.json();
     setSkills(data);
   };
