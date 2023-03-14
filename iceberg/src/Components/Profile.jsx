@@ -155,8 +155,8 @@ function ProfileConnections() {
     <>
       <ul className="margin-top-8">
         <li>
-          <a href="">
-            <span className="link-text">41 connections</span>
+          <a href="" className="link-text">
+            41 connections
           </a>
         </li>
       </ul>

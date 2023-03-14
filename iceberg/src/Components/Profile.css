@@ -39,7 +39,7 @@
 }
 .text-heading-large {
   /* font-size: 1.2rem; */
-  font-size:24px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 30px;
 }
@@ -50,8 +50,8 @@
 .margin-right-12 {
   margin-right: 12px;
 }
-.margin-top-8{
-  margin-top:8px;
+.margin-top-8 {
+  margin-top: 8px;
 }
 .t-normal {
   font-weight: 400;
@@ -245,9 +245,9 @@ PROFILE INFORMATION
   max-width: calc(100% - 232px - 2.4rem);
   line-height: 1rem;
 }
-.user-headline-2{
-  font-size:16px;
-  font-weight:400;
+.user-headline-2 {
+  font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
 }
 .company-details {
@@ -307,6 +307,10 @@ PROFILE INFORMATION
   padding: 0;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+}
+.anchor-jump-to-education:hover {
+  color: #0a66c2;
 }
 
 .location-details {
@@ -346,6 +350,7 @@ CONNECTIONS
 }
 .anchor-connections {
   color: rgba(0, 0, 0, 0.8);
+  padding-top: 8px;
 }
 .anchor-connections:hover {
   cursor: pointer;
@@ -373,9 +378,9 @@ MESSAGE BUTTON
 }
 .anchor-button {
   margin-right: 8px;
-
   background-color: #0a66c2;
   color: #fff;
+  text-decoration: none;
 }
 .anchor-button:hover {
   cursor: pointer;
@@ -500,11 +505,12 @@ FOOTER
   color: #0a66c2;
   font-weight: 600;
   font-size: 14px;
+  text-decoration: none !important;
 }
 .link-text:visited {
   color: #0a66c2;
 }
 .link-text:hover {
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
