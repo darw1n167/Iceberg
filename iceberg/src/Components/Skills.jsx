@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 import "./Skills.css";
 
+import { API_URL } from "../App";
+
 function Skills() {
   const [skills, setSkills] = useState([]);
   const [companies, setCompanies] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
   const getCompany = async () => {
-    const response = await fetch("https://iceberg.onrender.com/company");
+
+    const response = await fetch(`${API_URL}/company`);
+
     const data = await response.json();
     const companyObj = {};
     for (const company of data) {
@@ -21,7 +25,9 @@ function Skills() {
   };
 
   const getSkills = async () => {
-    const response = await fetch("https://iceberg.onrender.com/skills");
+
+    const response = await fetch(`${API_URL}/skills`);
+
     const data = await response.json();
     setSkills(data);
   };

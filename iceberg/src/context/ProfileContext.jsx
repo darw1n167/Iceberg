@@ -1,5 +1,7 @@
 import { useState, useEffect, createContext } from "react";
 
+import { API_URL } from "../App";
+
 const ProfileContext = createContext();
 
 export const ProfileProvider = ({ children }) => {
@@ -7,7 +9,9 @@ export const ProfileProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const getUsers = async () => {
-    const response = await fetch("https://iceberg.onrender.com/users");
+
+    const response = await fetch(`${API_URL}/users`);
+
     const data = await response.json();
     setUsers(data);
     setIsLoading(false);

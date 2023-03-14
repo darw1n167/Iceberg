@@ -17,57 +17,61 @@ import InLearning from './Components/InLearning';
 import NavBar from './Components/NavBar';
 import Highlights from './Components/Highlights';
 
-import { ProfileProvider } from './context/ProfileContext';
+import { ProfileProvider } from "./context/ProfileContext";
 
 export const ExperienceContext = React.createContext();
 
-export const API_URL = 'https://iceberg.onrender.com';
+export const API_URL = "https://iceberg.onrender.com"; // CHANGE THIS DEPENDING ON DEPLOYMENT OR LOCAL TESTING NEEDS
 
 function App() {
+  const [experience, setExperience] = useState([]);
+  const [overlayOn, setOverlayOn] = useState(false);
 
-	const [experience, setExperience] = useState([]);
-
-	useEffect(() => {
-		async function fetchExperience() {
-			const response = await fetch(`${API_URL}/profile`);
-			const data = await response.json();
-			setExperience(data);
-		}
-		fetchExperience();
-	}, []);
-	return (
-		<>
-			<ProfileProvider>
-				<ExperienceContext.Provider value={{ experience, setExperience }}>
-					<div className='full-page'>
-						<NavBar />
-						<div className='outer-main'>
-							<div className='main-content'>
-								<div className='main-body'>
-									<Profile />
-									<Highlights />
-									<About />
-									<ActivityFeed />
-									<Experience />
-									<Education />
-									<Skills />
-									<Interests />
-								</div>
-								<div className='side-bar'>
-									<TopAd />
-									<PeopleAlsoViewed />
-									<MayKnow />
-									<InLearning />
-									<BottomAd />
-								</div>
-							</div>
-						</div>
-						<Footer />
-					</div>
-				</ExperienceContext.Provider>
-			</ProfileProvider>
-		</>
-	);
+  useEffect(() => {
+    async function fetchExperience() {
+      const response = await fetch(`${API_URL}/profile`);
+      const data = await response.json();
+      setExperience(data);
+    }
+    fetchExperience();
+  }, []);
+  return (
+    <>
+      <ProfileProvider>
+        <ExperienceContext.Provider value={{ experience, setExperience }}>
+          <div className="full-page">
+            <div
+              className="overlay"
+              style={{ display: overlayOn ? "block" : "none" }}
+            ></div>
+            <NavBar setOverlayOn={setOverlayOn} />
+            <div className="outer-main">
+              <div className="main-content">
+                <div className="main-body">
+                  <Profile />
+                  <Highlights />
+                  <About />
+                  <ActivityFeed />
+                  <Experience />
+                  <Education />
+                  <Skills />
+                  <Interests />
+                </div>
+                <div className="side-bar">
+                  <TopAd />
+                  <PeopleAlsoViewed />
+                  <MayKnow />
+                  <InLearning />
+                  <BottomAd />
+                </div>
+              </div>
+            </div>
+            <Footer />
+          </div>
+        </ExperienceContext.Provider>
+      </ProfileProvider>
+    </>
+  );
 }
 
-export default App
+export default App;
